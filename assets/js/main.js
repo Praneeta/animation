@@ -96,7 +96,7 @@ Animation.mainFunction = (function() {
           video_id = $gift.attr('data-video-id')
         if(alwaysPlay || $gift.attr('data-play-video') === 'true') {
           $gift.attr('data-play-video', 'false')
-          $('.video-embed').html("<iframe width=\"294\" height=\"180\" src=\"http://www.youtube.com/embed/"+ video_id +"?autoplay=1\" frameborder=\"0\"></iframe>")
+          $('.video-embed').html("<iframe width=\"294\" height=\"180\" src=\"http://www.youtube.com/embed/"+ video_id +"?autoplay=1&controls=0&showinfo=0\" frameborder=\"0\"></iframe>")
         }
       },
 
