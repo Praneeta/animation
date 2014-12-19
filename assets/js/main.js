@@ -12,42 +12,41 @@ Animation.mainFunction = (function() {
         {"question":"In home alone what is the name of the kid",
          "answers":["Jack", "Mark", "Kevin", "Harry"],
          "correct": 2,
-         "video": ""
+         "video": "RwlUQEo4Vc0"
         },
         {"question":"Where on her head does Anna develop a white streak",
          "answers":["The Right Side", "The Left Side", "The Ceter", "It all turns white"],
          "correct": 3,
-         "video": ""
+         "video": "L0MK7qz13bU"
         },
         {"question":"In Polar Express movie, what is 'The First Gift of Christmas'",
          "answers":["A Reindeer","A bell from Santa's sleigh", "The Polar Star", "Santa Himself"],
          "correct": 2,
-         "video": ""
+         "video": "YJ50YCpYkqM"
         },
         {"question":"What is the name of the rabbit in the maggic hat in Frosty the Snowman",
          "answers":["Hocus Pocus","Abra ka Dabra", "Magic Mike", "Avada Kevadra"],
          "correct": 1,
-         "video": ""
+         "video": "YJ50YCpYkqM"
         },
         {"question":"In home alone what is the name of the kid",
          "answers":["Jack","Mark", "Kevin", "Harry"],
          "correct": 2,
-         "video": ""
+         "video": "YJ50YCpYkqM"
         },
         {"question":"In home alone what is the name of the kid",
          "answers":["Jack","Mark", "Kevin", "Harry"],
          "correct": 2,
-         "video": ""
+         "video": "YJ50YCpYkqM"
         },
       ],
 
       buildQuestionContainer = function() {
-        console.log(question_set);
         $.each(question_set, function(index, value) {
           var question = $("<div class='question-container'></div>"),
               answer_container = $("<div class='answer-options'><ul></ul></div>"),
               correct_answer = $(this).attr("correct")
-          question.text($(this).attr("question"));
+          question.text($(this).attr("question")).attr("data-video-id", $(this).attr("video")) ;
 
          //hide questions other than first
          if (!index == 0) {
@@ -68,18 +67,23 @@ Animation.mainFunction = (function() {
         });
       },
 
+      showNextQuestion = function() {
+        $(questions_container).find(".gift-message").addClass("hidden");
+        $(questions_container).find("."+hidden_question).first().fadeIn("slow", function() {
+          $(this).removeClass(hidden_question);
+        });
+      }
+
       handleAnswerClick = function(target) {
         if (target.data("correct")) {
           target.parents(".question-container").fadeOut("slow", function() {
-            //target.parents(questions_container).find(hidden_question).first().removeClass(hidden_question);
-            target.parents(".question-container").siblings("."+hidden_question).first().removeClass(hidden_question).fadeIn("slow");
-            createAndDropGift();
+            //target.parents(".question-container").siblings("."+hidden_question).first().removeClass(hidden_question).fadeIn("slow");
+            createAndDropGift(target);
           });
         }
         else {
           alert("Oops this is the wrong Answer");
         }
-
       },
 
       //giftTween = TweenLite.to(".gift", 4, {top: 630, ease:Bounce.easeOut}),
@@ -100,13 +104,15 @@ Animation.mainFunction = (function() {
         }
       },
 
-      createAndDropGift = function() {
-        var ornament = gift_num % 2
+      createAndDropGift = function(target) {
+        var ornament = gift_num % 2,
+            video_id = target.parents(".question-container").attr("data-video-id");
         //special gift
         if(gift_num % 5 === 0 && gift_num > 0) ornament = special_gift[gift_num / 5]
         new_gift = $('<div class="gift ornament-' + ornament + '"></div>');
-        new_gift.addClass(new_gift_class).attr('data-video-id', video_links[gift_num%4]).attr('data-play-video', 'true');
+        new_gift.addClass(new_gift_class).attr('data-video-id', video_id).attr('data-play-video', 'true');
         gift_num++;
+        $(target).parents(questions_container).find(".gift-message").removeClass("hidden");
         $('.page-body').append(new_gift);
         TweenLite.to("."+new_gift_class, 4, {top: 630,
           ease:Bounce.easeOut, onComplete:function(){
@@ -119,6 +125,7 @@ Animation.mainFunction = (function() {
       },
       dragEnd = function(event) {
         selectAndPlayVideo(event, false)
+        showNextQuestion();
       };
   return {
     init: function() {
