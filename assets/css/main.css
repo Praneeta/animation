@@ -1,4 +1,4 @@
-.page-body{
+.page-body {
   background-image: url('../images/Snowy-Village-BG.jpg');
   background-repeat: no-repeat
   /*background: #CC6600;*/
@@ -25,10 +25,19 @@
   top: 20px;
 }
 
-.video-embed{
+.video-embed {
   width: 294px;
   height: 180px;
-  position: fixed;
+  position: absolute;
   top: 10px;
   left: 450px;
+}
+
+.tree {
+  width: 455px;
+  height: 670px;
+  display: inline-block;
+  position: absolute;
+  left: 30px;
+  top: 40px;
 }
