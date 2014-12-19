@@ -1,6 +1,27 @@
 .page-body{
   background-image: url('../images/Snowy-Village-BG.jpg');
   background-repeat: no-repeat
+  /*background: #CC6600;*/
+}
+
+.gift-box {
+  position: relative;
+}
+
+.gift-box img {
+  width: 200px;
+  position: absolute;
+  right: 20%;
+}
+
+.gift {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  display: inline-block;
+  position: absolute;
+  right: 25%;
+  top: 630px;
 }
 
 .video-embed{

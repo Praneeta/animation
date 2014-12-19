@@ -2,12 +2,14 @@ var Animation = Animation || {};
 
 Animation.mainFunction = (function() {
   var test = "hello",
-  mytestFunction = function() {
-    console.log("This is my test function");
+  myTween = function() {
+    //var myTest = $(".test-tween");
+    //TweenLite.to(".test-tween", 5, {width:500});
+    TweenLite.from(".gift", 4, {top: 0, ease:Bounce.easeOut});
   };
   return {
     init: function() {
-      mytestFunction();
+      myTween();
     }
   }
 })();
