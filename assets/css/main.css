@@ -1,6 +1,6 @@
 .page-body {
   background-image: url('../images/Snowy-Village-BG.jpg');
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
   /*background: #CC6600;*/
 }
 
@@ -86,4 +86,11 @@
 
 .answer:hover {
   cursor: pointer
+}
+
+.snow {
+  background-image: url('../images/snow.png');
+  width: 100%;
+  height: 700px;
+  position: absolute;
 }
