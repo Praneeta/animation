@@ -69,13 +69,15 @@
 }
 
 .questions-container {
-  border: 1px solid red;
   width: 500px;
   height: 400px;
   position: absolute;
   top: 200px;
   left: 450px;
-  background-color: white;
+  /* background-color: transparent; */
+  font-size: 1.5em;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .hidden-question {
@@ -83,5 +85,5 @@
 }
 
 .answer:hover {
-  background-color: #047da5;
+  cursor: pointer
 }
