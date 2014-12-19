@@ -67,3 +67,21 @@
   height: 71px;
   width: 70px;
 }
+
+.questions-container {
+  border: 1px solid red;
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  top: 200px;
+  left: 450px;
+  background-color: white;
+}
+
+.hidden-question {
+  display: none;
+}
+
+.answer:hover {
+  background-color: #047da5;
+}
