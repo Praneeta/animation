@@ -18,7 +18,6 @@
 .gift {
   width: 50px;
   height: 50px;
-  background-color: yellow;
   display: inline-block;
   position: absolute;
   right: 25%;
@@ -40,4 +39,25 @@
   position: absolute;
   left: 30px;
   top: 40px;
+}
+
+.ornament-0 {
+  background-image: url('../images/ornament_1.png')
+}
+
+.ornament-1 {
+  background-image: url('../images/ornament_2.png');
+  height: 87px;
+}
+
+.ornament-star {
+  background-image: url('../images/star.png');
+  height: 70px;
+  width: 70px;
+}
+
+.ornament-box {
+  background-image: url('../images/small_gift.png');
+  height: 47px;
+  width: 70px;
 }
