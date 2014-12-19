@@ -121,7 +121,7 @@ Animation.mainFunction = (function() {
         var ornament = gift_num % 2,
             video_id = target.parents(".question-container").attr("data-video-id");
         //special gift
-        if(gift_num % 5 === 0 && gift_num > 0) ornament = special_gift[gift_num / 5]
+        if(gift_num % 3 === 0 && gift_num > 0) ornament = special_gift[gift_num / 3]
         new_gift = $('<div class="gift ornament-' + ornament + '"></div>');
         new_gift.addClass(new_gift_class).attr('data-video-id', video_id).attr('data-play-video', 'true');
         gift_num++;
@@ -137,8 +137,9 @@ Animation.mainFunction = (function() {
         }});
       },
       dragEnd = function(event) {
+        var $gift = $(event.target)
+        if($gift.attr('data-play-video') === 'true') showNextQuestion();
         selectAndPlayVideo(event, false)
-        showNextQuestion();
       };
   return {
     init: function() {
