@@ -2,3 +2,11 @@
   background-image: url('../images/Snowy-Village-BG.jpg');
   background-repeat: no-repeat
 }
+
+.video-embed{
+  width: 294px;
+  height: 180px;
+  position: fixed;
+  top: 10px;
+  left: 450px;
+}
