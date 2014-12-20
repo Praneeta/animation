@@ -126,3 +126,123 @@ body { background-color:#333; }
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }
+
+div.lights {
+  height: 20px;
+  font-size: 3em;
+  position: absolute;
+}
+
+div.lights:nth-child(1) {
+  top: 20px;
+  left: 200px;
+}
+
+div.lights:nth-child(2) {
+  top: 70px;
+  left: 180px;
+}
+
+
+div.lights:nth-child(3) {
+  top: 140px;
+  left: 160px;
+}
+
+div.lights:nth-child(4) {
+  top: 210px;
+  left: 140px;
+}
+
+div.lights:nth-child(5) {
+  top: 280px;
+  left: 100px;
+}
+
+div.lights:nth-child(6) {
+  top: 340px;
+  left: 80px;
+}
+
+div.lights:nth-child(7) {
+  top: 420px;
+  left: 60px;
+}
+
+div.lights:nth-child(8) {
+  top: 490px;
+  left: 40px;
+}
+
+
+div.lights:nth-child(even) a{
+  color:#FFDD1B;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+div.lights:nth-child(odd) a{
+  color:#FF1177;
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+div.lights a{
+  text-decoration:none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*glow for webkit*/
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF1177,
+               0 0 70px  #FF1177,
+               0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+    font-size: 1.45em;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+    font-size: 1.45em;
+  }
+}
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FFDD1B,
+               0 0 70px  #FFDD1B,
+               0 0 80px  #FFDD1B,
+               0 0 100px #FFDD1B,
+               0 0 150px #FFDD1B;
+    font-size: 1.45em;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FFDD1B,
+               0 0 35px #FFDD1B,
+               0 0 40px #FFDD1B,
+               0 0 50px #FFDD1B,
+               0 0 75px #FFDD1B;
+    font-size: 1.45em;
+  }
+}
