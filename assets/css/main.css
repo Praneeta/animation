@@ -90,7 +90,15 @@
   cursor: pointer
 }
 
+.save-image {
+  color: blue;
+  z-index: 2;
+}
+
+
+
 body { background-color:#333; }
+/* ----Snow----- */
 .snow{
 	background: none;
 	font-family: Androgyne;
@@ -126,6 +134,7 @@ body { background-color:#333; }
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
 }
+/* end snow */
 
 div.lights {
   height: 20px;
