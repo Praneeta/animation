@@ -84,6 +84,7 @@ Animation.mainFunction = (function() {
         $(questions_container).find(".gift-message").addClass("hidden");
         $(questions_container).find("."+hidden_question).first().fadeIn("slow", function() {
           $(this).removeClass(hidden_question);
+          selectAndPlayVideo($(this), true)
         });
       }
 
@@ -108,12 +109,11 @@ Animation.mainFunction = (function() {
       removeNew = function(target) {
         target.removeClass(new_gift_class);
       },
-      selectAndPlayVideo = function (event, alwaysPlay) {
-        var $gift = $(event.target),
-          video_id = $gift.attr('data-video-id')
-        if(alwaysPlay || $gift.attr('data-play-video') === 'true') {
-          $gift.attr('data-play-video', 'false')
-          $('.video-embed').html("<iframe width=\"294\" height=\"180\" src=\"http://www.youtube.com/embed/"+ video_id +"?autoplay=1&controls=0&showinfo=0\" frameborder=\"0\"></iframe>")
+      selectAndPlayVideo = function ($question, alwaysPlay) {
+        var video_id = $question.attr('data-video-id')
+        if(alwaysPlay || $question.attr('data-play-video') === 'true') {
+          $question.attr('data-play-video', 'false')
+          $('.video-embed').html("<iframe width=\"422.4\" height=\"257.4\" src=\"http://www.youtube.com/embed/"+ video_id +"?autoplay=1&controls=0&showinfo=0\" frameborder=\"0\"></iframe>")
         }
       },
 
@@ -130,24 +130,18 @@ Animation.mainFunction = (function() {
         TweenLite.to("."+new_gift_class, 4, {top: 630,
           ease:Bounce.easeOut, onComplete:function(){
             Draggable.create(new_gift, {onDragEnd: dragEnd})
-            new_gift.on('dblclick', function(event) {
-              selectAndPlayVideo(event, true)
-            })
             removeNew(new_gift);
         }});
       },
       dragEnd = function(event) {
         var $gift = $(event.target)
         if($gift.attr('data-play-video') === 'true') showNextQuestion();
-        selectAndPlayVideo(event, false)
+        $gift.attr('data-play-video', 'false')
       };
   return {
     init: function() {
       buildQuestionContainer();
-
-      //$(".theclick").on("click", function() {
-      //  createAndDropGift();
-      //});
+      selectAndPlayVideo($('.question-container:first'), true)
       $(".answer").on("click", function() {
         handleAnswerClick($(this));
       });
