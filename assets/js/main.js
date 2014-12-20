@@ -13,7 +13,7 @@ Animation.mainFunction = (function() {
          "video": "RwlUQEo4Vc0"
         },
         {"question":"Where on her head does Anna develop a white streak",
-         "answers":["The Right Side", "The Left Side", "The Ceter", "It all turns white"],
+         "answers":["The Right Side", "The Left Side", "The Center", "It all turns white"],
          "correct": 3,
          "video": "j08nbuPc92w"
         },
