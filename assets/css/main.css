@@ -1,27 +1,32 @@
 .page-body {
   background-image: url('../images/Snowy-Village-BG.jpg');
   background-repeat: no-repeat;
+  width: 1200px;
+  height: 700px;
+  margin: auto;
+  position: relative;
   /*background: #CC6600;*/
 }
 
 .gift-box {
-  position: relative;
-}
-
-.gift-box img {
-  width: 200px;
+  background-image: url('../images/santa_sleigh.png');
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 230px;
   position: absolute;
-  right: 20%;
+  right: 100px;
+  top: 10px;
   z-index: 1;
 }
+
 
 .gift {
   width: 50px;
   height: 50px;
   display: inline-block;
   position: absolute;
-  right: 25%;
-  top: 20px;
+  right: 150px;
+  top: 90px;
   z-index: 99;
 }
 
@@ -90,21 +95,23 @@
   cursor: pointer
 }
 
-body { background-color:#333; }
+body {
+  background-color:#000;
+  margin: 0;
+}
 .snow{
 	background: none;
 	font-family: Androgyne;
 	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
 	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
 	z-index:1;
 	-webkit-animation: snow 10s linear infinite;
 	-moz-animation: snow 10s linear infinite;
 	-ms-animation: snow 10s linear infinite;
 	animation: snow 10s linear infinite;
+  width: 1200px;
+  height: 700px;
+  margin: auto;
 }
 @keyframes snow {
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
@@ -134,8 +141,8 @@ div.lights {
 }
 
 div.lights:nth-child(1) {
-  top: 20px;
-  left: 200px;
+  top: 25px;
+  left: 210px;
 }
 
 div.lights:nth-child(2) {
