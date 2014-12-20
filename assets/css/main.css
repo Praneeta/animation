@@ -22,6 +22,7 @@
   position: absolute;
   right: 25%;
   top: 20px;
+  z-index: 99;
 }
 
 .video-embed {
@@ -78,6 +79,7 @@
   font-size: 1.5em;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  z-index: 97;
 }
 
 .hidden-question, .hidden {
