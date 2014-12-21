@@ -8,6 +8,43 @@
   /*background: #CC6600;*/
 }
 
+.page-body.red-bg{
+  background-image: none;
+  background-color: red;
+  color: white;
+}
+
+.page-body .card {
+  margin: auto;
+  top: 100px;
+  position: relative;
+  width: 500px;
+}
+
+.red-bg ul {
+  list-style-type: none;
+  padding-top: 30px;
+}
+
+.red-bg ul img{
+  width: 100px;
+}
+
+.red-bg li a{
+  font-size: 1.5em;
+  text-decoration: none;
+  color: white;
+  height: 100px;
+  line-height: 56px;
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
 .gift-box {
   background-image: url('../images/santa_sleigh.png');
   background-repeat: no-repeat;
@@ -39,6 +76,8 @@
 }
 
 .tree {
+  background-image: url('../images/christmas_tree.png');
+  background-repeat: no-repeat;
   width: 455px;
   height: 670px;
   display: inline-block;
