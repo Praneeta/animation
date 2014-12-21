@@ -200,12 +200,10 @@ Animation.mainFunction = (function() {
                 //  debugger;
                 //  image.attr("src", canvas.toDataURL("image/png"));
             //}
-            debugger;
             var data = canvas.toDataURL("image/png");
             var encodedPng = data.substring(data.indexOf(',') + 1, data.length);
             var decodedPng = Base64Binary.decode(encodedPng);
             FB.getLoginStatus(function(response) {
-              debugger;
               if (response.status === "connected") {
                 postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", decodedPng, webSite);
               } else if (response.status === "not_authorized") {
@@ -229,7 +227,7 @@ Animation.mainFunction = (function() {
         handleAnswerClick($(this));
       });
       //santaGivesGift();
-     $(".save-image").on("click", function() {
+     $(".fb-share").on("click", function() {
        postCanvasToFacebook();
      });
      $('.message').on('click', function () {

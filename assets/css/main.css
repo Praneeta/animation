@@ -412,3 +412,10 @@ div.lights a{
 .edit-text {
   display: none;
 }
+
+.fb-share {
+  background: url('../images/facebookShare.jpg') no-repeat;
+  width: 200px;
+  height: 75px;
+
+}
