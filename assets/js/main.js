@@ -81,10 +81,16 @@ Animation.mainFunction = (function() {
 
       showNextQuestion = function() {
         $(questions_container).find(".gift-message").addClass("hidden");
-        $(questions_container).find("."+hidden_question).first().fadeIn("slow", function() {
-          $(this).removeClass(hidden_question);
-          //selectAndPlayVideo($(this), true)
-        });
+        var nextQuestion = $(questions_container).find("."+hidden_question).first()
+        if (nextQuestion.length) {
+          nextQuestion.fadeIn("slow", function() {
+            $(this).removeClass(hidden_question);
+            selectAndPlayVideo($(this), true)
+          });
+        } else {
+          $(questions_container).hide()
+          $('.message').show()
+        }
       },
 
       handleAnswerClick = function(target) {
@@ -95,7 +101,9 @@ Animation.mainFunction = (function() {
           });
         }
         else {
-          alert("Oops this is the wrong Answer");
+          target.parents(".question-container").fadeOut("slow", function() {
+            showNextQuestion();
+          });
         }
       },
 
@@ -112,7 +120,7 @@ Animation.mainFunction = (function() {
         var video_id = $question.attr('data-video-id')
         if(alwaysPlay || $question.attr('data-play-video') === 'true') {
           $question.attr('data-play-video', 'false')
-          $('.video-embed').html("<iframe width=\"422.4\" height=\"257.4\" src=\"http://www.youtube.com/embed/"+ video_id +"?autoplay=1&controls=0&showinfo=0\" frameborder=\"0\"></iframe>")
+          $('.video-embed').html("<iframe width=\"" + Animation.video.width + "\" height=\"" + Animation.video.height + "\" src=\"http://www.youtube.com/embed/"+ video_id +"?autoplay=1&controls=0&showinfo=0\" frameborder=\"0\"></iframe>")
         }
       },
 
@@ -222,13 +230,16 @@ Animation.mainFunction = (function() {
     init: function() {
       if (Animation.trivia) {
         buildQuestionContainer();
-        //selectAndPlayVideo($('.question-container:first'), true)
+        selectAndPlayVideo($('.question-container:first'), true)
       }
       $(".answer").on("click", function() {
         handleAnswerClick($(this));
       });
       //santaGivesGift();
      $(".fb-share").on("click", function() {
+       $('.video-embed').hide();
+       $('.message-save').hide();
+       $(this).hide();
        postCanvasToFacebook();
      });
      $('.message').on('click', function () {
@@ -240,6 +251,7 @@ Animation.mainFunction = (function() {
        $('.edit-text').hide()
        if($('.message-text').val()) $('.message').html($('.message-text').val())
        $('.message').show()
+       $('.fb-share').show()
      })
      $('.gift-holder').on('click', function () {
        createAndDropGift()
