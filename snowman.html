@@ -10,22 +10,25 @@
     <!--<script src="./assets/js/FileSaver.min.js"></script>-->
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <script charset="utf-8" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="assets/js/test1.js"></script>
+    <script>
+      Animation = Animation || {}
+      Animation.trivia = false;
+    </script>
     <script src="assets/js/main.js"></script>
     <!--CDN link for the latest TweenMax-->
   </head>
   <body>
     <div class="page-body snowman">
       <pre class="message">
-        Wish you a Merry Christmas
-                  - Kotian Family
+        click to type message..
       </pre>
       <div class="edit-text">
-        <textarea class="message-text" rows=3></textarea>
+        <textarea class="message-text" rows=3 placeholder='type here...'></textarea>
         <button class="message-save">Preview</button>
       </div>
+      <div class='save-image'>Save Image </div>
       <div class="snow"></div>
-      <div class="video-embed"></div>
+      <div class="gift-holder" title="click to get ornaments"></div>
       <div class="tree">
         <div class="lights"> <a>.</a> </div>
 
@@ -40,11 +43,6 @@
         <div class="lights"> <a>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</a> </div>
 
         <div class="lights"> <a>.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.</a> </div>
-
-      </div>
-      <div class="gift-box"></div>
-      <div class="questions-container">
-        <div class="gift-message hidden">Congratulations!! Place your ornament on the tree relive the magick of Christmas!</div>
       </div>
     </div>
   </body>

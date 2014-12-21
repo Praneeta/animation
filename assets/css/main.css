@@ -57,15 +57,12 @@
 }
 
 .snowman .message {
-  font-size: 2em;
-  font-family: fantasy;
-  color: #B90009;
   margin: 0;
-  font-weight: bold;
   top: 50px;
   left: 140px;
   position: relative;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  cursor: pointer;
+  z-index: 12
 }
 
 .snowman .questions-container {
@@ -73,12 +70,65 @@
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
-.snowman .gift-box {
-  display: none;
-}
-
 .snowman .snow {
   width: 1050px;
+}
+
+.snowman .message-text, .snowman .message {
+  font-size: 3.5em;
+  font-family: fantasy;
+  font-weight: bold;
+  color: #B90009;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  width: 750px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 24px;
+}
+
+.snowman .edit-text {
+  position: relative;
+  top: 50px;
+  left: 140px;
+  width: 900px;
+}
+
+.snowman .message-save {
+  background-color: #B90009;
+  color: white;
+  font-size: 1.2em;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 9px;
+  border: none;
+  position: absolute;
+  z-index: 13;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.snowman .gift-holder {
+  width: 180px;
+  height: 200px;
+  position: absolute;
+  left: 380px;
+  top: 135px;
+  cursor: pointer;
+}
+
+.snowman .gift-holder[title]:hover:after {
+  content: attr(title);
+  font-size: 1.2em;
+  font-family: fantasy;
+  font-weight: bold;
+  color: #B90009;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.snowman .gift {
+  top: 250px;
+  left: 420px;
 }
 
 /** snowman end ***/
@@ -145,6 +195,12 @@ h1 {
   width: 70px;
 }
 
+.ornament-star-new {
+  background-image: url('../images/star-new.png');
+  height: 70px;
+  width: 70px;
+}
+
 .ornament-box {
   background-image: url('../images/small_gift.png');
   height: 47px;
@@ -152,7 +208,7 @@ h1 {
 }
 
 .ornament-bear {
-  background-image: url('../images/small_gift.png');
+  background-image: url('../images/bear.png');
   height: 71px;
   width: 70px;
 }
