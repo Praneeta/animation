@@ -1,5 +1,4 @@
-var Animation = Animation || {},
-    webSite = "http://localhost:8000",
+var webSite = "http://localhost:8000",
     fileName = "christmasCard";
 
 
@@ -147,7 +146,7 @@ Animation.mainFunction = (function() {
       createAndDropGift = function(target) {
         var ornament = gift_num % 2
         //special gift
-        if(gift_num % 3 === 0 && gift_num > 0) ornament = special_gift[gift_num / 3]
+        if(gift_num % 3 === 0 && gift_num > 0) ornament = Animation.special_gift[gift_num / 3]
         new_gift = $('<div class="gift ornament-' + ornament + '"></div>');
         new_gift.addClass(new_gift_class).attr('data-video-id', video_id).attr('data-play-video', 'true');
         gift_num++;
@@ -156,7 +155,7 @@ Animation.mainFunction = (function() {
           $(target).parents(questions_container).find(".gift-message").removeClass("hidden");
         }
         $('.page-body').append(new_gift);
-        TweenLite.to("."+new_gift_class, 1, {top: 630,
+        TweenLite.to("."+new_gift_class, 1, {top: Animation.giftDrop,
           ease:Bounce.easeOut, onComplete:function(){
             Draggable.create(new_gift, {onDragEnd: dragEnd})
             removeNew(new_gift);
@@ -221,8 +220,10 @@ Animation.mainFunction = (function() {
      };
   return {
     init: function() {
-      //buildQuestionContainer();
-      //selectAndPlayVideo($('.question-container:first'), true)
+      if (Animation.trivia) {
+        buildQuestionContainer();
+        //selectAndPlayVideo($('.question-container:first'), true)
+      }
       $(".answer").on("click", function() {
         handleAnswerClick($(this));
       });

@@ -56,15 +56,6 @@
   left: 550px;
 }
 
-.snowman .message {
-  margin: 0;
-  top: 50px;
-  left: 140px;
-  position: relative;
-  cursor: pointer;
-  z-index: 12
-}
-
 .snowman .questions-container {
   color: #B90009;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
@@ -132,6 +123,38 @@
 }
 
 /** snowman end ***/
+
+/*** harry potter ***/
+
+.page-body.harry-potter{
+  background-image: url('../images/harry-potter.jpg');
+  width: 1200px;
+  height: 625px;
+  color: #d9b309;
+}
+
+.harry-potter .tree {
+  left: 764px;
+  top: 86px;
+  height: 550px;
+  background-image: url('../images/christmas_tree_2.png');
+}
+
+.harry-potter .snow {
+  height: 560px;
+}
+
+.harry-potter .questions-container {
+  height: 270px;
+}
+
+.harry-potter .gift-box {
+  background-image: url('../images/dumbledore.png');
+  right: 0px;
+}
+
+/*** avada kevadra ***/
+
 
 
 h1 {
@@ -213,6 +236,11 @@ h1 {
   width: 70px;
 }
 
+.ornament-snitch {
+  background-image: url('../images/snitch.png');
+  height: 70px;
+  width: 149px;
+}
 .questions-container {
   width: 500px;
   height: 400px;
@@ -418,4 +446,13 @@ div.lights a{
   width: 200px;
   height: 75px;
 
+}
+
+.message {
+  margin: 0;
+  top: 50px;
+  left: 140px;
+  position: relative;
+  cursor: pointer;
+  z-index: 12
 }
