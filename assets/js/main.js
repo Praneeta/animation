@@ -126,6 +126,27 @@ Animation.mainFunction = (function() {
         handleAnswerClick($(this));
       });
       santaGivesGift();
+
+     $(".save-image").on("click", function() {
+        console.log("we are in element click---");
+        html2canvas($(".tree"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                document.body.appendChild(canvas);
+                  var image = $('.canvas-outcome img');
+                  debugger;
+                  image.attr("src", canvas.toDataURL("image/png"));
+                  console.log(image);
+                  //$(body).append(image)
+                //canvas.toBlob(function(blob) {
+		//  //saveAs(blob, "christmastree.png");
+                //  //debugger;
+
+	        //});
+            }
+        });
+     });
+
     }
   }
 })();
