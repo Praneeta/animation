@@ -24,8 +24,8 @@ if ( XMLHttpRequest.prototype.sendAsBinary === undefined ) {
 //window.fbAsyncInit = function() {
 //      FB.init({
 //              appId  : "897326893619716",
-//              status : true, 
-//                    cookie : true, 
+//              status : true,
+//                    cookie : true,
 //                      xfbml  : true  // parse XFBML
 //                            });
 //};
@@ -196,7 +196,7 @@ Animation.mainFunction = (function() {
                 //document.body.appendChild(canvas);
                 //  var image = $('.canvas-outcome img');
                 //  debugger;
-                //  image.attr("src", canvas.toDataURL("image/png")); 
+                //  image.attr("src", canvas.toDataURL("image/png"));
             //}
             debugger;
             var data = canvas.toDataURL("image/png");
@@ -221,15 +221,24 @@ Animation.mainFunction = (function() {
      };
   return {
     init: function() {
-      buildQuestionContainer();
-      selectAndPlayVideo($('.question-container:first'), true)
+      //buildQuestionContainer();
+      //selectAndPlayVideo($('.question-container:first'), true)
       $(".answer").on("click", function() {
         handleAnswerClick($(this));
       });
-      santaGivesGift();
+      //santaGivesGift();
      $(".save-image").on("click", function() {
        postCanvasToFacebook();
      });
+     $('.message').on('click', function () {
+       $('.edit-text').show()
+       $(this).hide()
+     })
+     $('.message-save').on('click', function () {
+       $('.edit-text').hide()
+       $('.message').html($('message-text').text())
+       $('.message').show()
+     })
     }
   }
 })();

@@ -8,6 +8,8 @@
   /*background: #CC6600;*/
 }
 
+
+/** index start **/
 .page-body.red-bg{
   background-image: none;
   background-color: red;
@@ -39,6 +41,48 @@
   vertical-align: top;
   padding-left: 10px;
 }
+
+/*** index end ***/
+
+
+/*** snowman start ***/
+
+.page-body.snowman{
+  background-image: url('../images/snowman-bg.jpg');
+  width: 1050px;
+}
+
+.snowman .tree {
+  left: 550px;
+}
+
+.snowman .message {
+  font-size: 2em;
+  font-family: fantasy;
+  color: #B90009;
+  margin: 0;
+  font-weight: bold;
+  top: 50px;
+  left: 140px;
+  position: relative;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.snowman .questions-container {
+  color: #B90009;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.snowman .gift-box {
+  display: none;
+}
+
+.snowman .snow {
+  width: 1050px;
+}
+
+/** snowman end ***/
+
 
 h1 {
   margin: 0;
@@ -190,38 +234,38 @@ div.lights {
 
 div.lights:nth-child(1) {
   top: 25px;
-  left: 210px;
+  left: 183px;
 }
 
 div.lights:nth-child(2) {
   top: 70px;
-  left: 180px;
+  left: 150px;
 }
 
 
 div.lights:nth-child(3) {
-  top: 140px;
-  left: 160px;
+  top: 147px;
+  left: 127px;
 }
 
 div.lights:nth-child(4) {
   top: 210px;
-  left: 140px;
+  left: 107px;
 }
 
 div.lights:nth-child(5) {
-  top: 280px;
-  left: 100px;
+  top: 273px;
+  left: 61px;
 }
 
 div.lights:nth-child(6) {
-  top: 340px;
-  left: 80px;
+  top: 333px;
+  left: 41px;
 }
 
 div.lights:nth-child(7) {
   top: 420px;
-  left: 60px;
+  left: 28px;
 }
 
 div.lights:nth-child(8) {
@@ -300,4 +344,15 @@ div.lights a{
                0 0 75px #FFDD1B;
     font-size: 1.45em;
   }
+}
+
+.message-text {
+  width: 300px;
+  height: 200px;
+  background: transparent;
+  border: none;
+  z-index: 10;
+}
+.edit-text {
+  display: none;
 }
