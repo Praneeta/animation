@@ -10,32 +10,37 @@
 
 
 /** index start **/
-.page-body.red-bg{
-  background-image: none;
-  background-color: red;
-  color: white;
-}
 
-.page-body .card {
-  margin: auto;
-  top: 100px;
+.home-page .card {
+  top: 200px;
   position: relative;
   width: 500px;
 }
 
-.red-bg ul {
+.home-page{
+  background-image: url('../images/simple-bg.jpg');
+  width: 1024px;
+}
+
+.home-page .snow {
+  width: 1024px;
+}
+
+.home-page ul {
   list-style-type: none;
   padding-top: 30px;
 }
 
-.red-bg ul img{
+.home-page ul img{
   width: 100px;
 }
 
-.red-bg li a{
+.home-page li a{
   font-size: 1.5em;
   text-decoration: none;
-  color: white;
+  color: #540f1e;
+  font-family: fantasy;
+  font-weight: bold;
   height: 100px;
   line-height: 56px;
   vertical-align: top;
@@ -182,7 +187,7 @@ h1 {
   position: absolute;
   right: 150px;
   top: 90px;
-  z-index: 9;
+  z-index: 9 !important;
 }
 
 .video-embed {
