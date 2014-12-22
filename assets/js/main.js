@@ -1,5 +1,5 @@
 var Animation = Animation || {},
-    webSite = "http://www.makemyholidaycard.com",
+var webSite = "Made this using http://www.makemyholidaycard.com",
     fileName = "christmasCard";
 
 
@@ -49,7 +49,7 @@ window.fbAsyncInit = function() {
 
 Animation.mainFunction = (function() {
   var new_gift_class = "new-gift",
-      special_gift = ['', 'star', 'box', 'bear'],
+      special_gift = ['', 'star-new', 'box', 'bear', 'star'],
       gift_num = 0,
       questions_container = ".questions-container",
       hidden_question = "hidden-question",
@@ -82,10 +82,16 @@ Animation.mainFunction = (function() {
 
       showNextQuestion = function() {
         $(questions_container).find(".gift-message").addClass("hidden");
-        $(questions_container).find("."+hidden_question).first().fadeIn("slow", function() {
-          $(this).removeClass(hidden_question);
-          selectAndPlayVideo($(this), true)
-        });
+        var nextQuestion = $(questions_container).find("."+hidden_question).first()
+        if (nextQuestion.length) {
+          nextQuestion.fadeIn("slow", function() {
+            $(this).removeClass(hidden_question);
+            selectAndPlayVideo($(this), true)
+          });
+        } else {
+          $(questions_container).hide()
+          $('.message').show()
+        }
       },
 
       handleAnswerClick = function(target) {
@@ -96,7 +102,9 @@ Animation.mainFunction = (function() {
           });
         }
         else {
-          alert("Oops this is the wrong Answer");
+          target.parents(".question-container").fadeOut("slow", function() {
+            showNextQuestion();
+          });
         }
       },
 
@@ -113,7 +121,7 @@ Animation.mainFunction = (function() {
         var video_id = $question.attr('data-video-id')
         if(alwaysPlay || $question.attr('data-play-video') === 'true') {
           $question.attr('data-play-video', 'false')
-          $('.video-embed').html("<iframe width=\"422.4\" height=\"257.4\" src=\"http://www.youtube.com/embed/"+ video_id +"?autoplay=1&controls=0&showinfo=0\" frameborder=\"0\"></iframe>")
+          $('.video-embed').html("<iframe width=\"" + Animation.video.width + "\" height=\"" + Animation.video.height + "\" src=\"http://www.youtube.com/embed/"+ video_id +"?autoplay=1&controls=0&showinfo=0\" frameborder=\"0\"></iframe>")
         }
       },
 
@@ -145,16 +153,18 @@ Animation.mainFunction = (function() {
       },
 
       createAndDropGift = function(target) {
-        var ornament = gift_num % 2,
-            video_id = target.parents(".question-container").attr("data-video-id");
+        var ornament = gift_num % 2
         //special gift
-        if(gift_num % 3 === 0 && gift_num > 0) ornament = special_gift[gift_num / 3]
+        if(gift_num % 3 === 0 && gift_num > 0) ornament = Animation.special_gift[gift_num / 3]
         new_gift = $('<div class="gift ornament-' + ornament + '"></div>');
         new_gift.addClass(new_gift_class).attr('data-video-id', video_id).attr('data-play-video', 'true');
         gift_num++;
-        $(target).parents(questions_container).find(".gift-message").removeClass("hidden");
+        if (Animation.trivia) {
+          var video_id = target.parents(".question-container").attr("data-video-id");
+          $(target).parents(questions_container).find(".gift-message").removeClass("hidden");
+        }
         $('.page-body').append(new_gift);
-        TweenLite.to("."+new_gift_class, 4, {top: 630,
+        TweenLite.to("."+new_gift_class, 1, {top: Animation.giftDrop,
           ease:Bounce.easeOut, onComplete:function(){
             Draggable.create(new_gift, {onDragEnd: dragEnd})
             removeNew(new_gift);
@@ -218,23 +228,33 @@ Animation.mainFunction = (function() {
      };
   return {
     init: function() {
-      //buildQuestionContainer();
-      //selectAndPlayVideo($('.question-container:first'), true)
+      if (Animation.trivia) {
+        buildQuestionContainer();
+        selectAndPlayVideo($('.question-container:first'), true)
+      }
       $(".answer").on("click", function() {
         handleAnswerClick($(this));
       });
       //santaGivesGift();
      $(".fb-share").on("click", function() {
+       $('.video-embed').hide();
+       $('.message-save').hide();
+       $(this).hide();
        postCanvasToFacebook();
      });
      $('.message').on('click', function () {
        $('.edit-text').show()
+       $('.message-text').focus()
        $(this).hide()
      })
      $('.message-save').on('click', function () {
        $('.edit-text').hide()
-       $('.message').html($('message-text').text())
+       if($('.message-text').val()) $('.message').html($('.message-text').val())
        $('.message').show()
+       $('.fb-share').show()
+     })
+     $('.gift-holder').on('click', function () {
+       createAndDropGift()
      })
     }
   }
