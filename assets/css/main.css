@@ -467,9 +467,21 @@ div.lights a{
 .fb-share {
   background: url('../images/facebookShare.png') no-repeat;
   width: 245px;
-  height: 55px;
+  height: 46px;
   cursor: pointer;
   display: none;
+  /*Shadow*/
+  -webkit-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+}
+
+.fb-share:hover {
+  margin-top: 2px;
+  /*Shadow*/
+  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
 }
 
 .message {
@@ -522,4 +534,25 @@ div.lights a{
   font: 3em;
   bottom: 0px;
   color: white;
+}
+
+.answer-options li {
+  margin-bottom: 10px;
+}
+
+.correct-answer {
+  background-image: url('../images/correct.png');
+}
+
+.wrong-answer {
+  background-image: url('../images/wrong.png');
+}
+
+.correct-answer, .wrong-answer {
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  margin-left: 5px;
+  display: inline-block;
 }

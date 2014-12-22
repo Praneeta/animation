@@ -69,7 +69,7 @@ Animation.mainFunction = (function() {
 
           $.each($(this).attr("answers"), function(index, value) {
             var answer_option = $("<li class='answer'></li>");
-            answer_option.text(value)
+            answer_option.text(value);
             if ( correct_answer == index) {
               answer_option.data("correct", true);
             }
@@ -95,17 +95,30 @@ Animation.mainFunction = (function() {
       },
 
       handleAnswerClick = function(target) {
+        if (target.parents(".question-container").find('span.answered').length) { return false;}
+        var correct = false;
+        target.append("<span class='hidden answered'></span>");
         if (target.data("correct")) {
+           correct = true;
+           target.find('span').addClass("correct-answer");
+        } else {
+           correct = false;
+           target.find('span').addClass("wrong-answer");
+        }
+        target.find('span').fadeIn("slow", function() {
+          setTimeout(function() {
           target.parents(".question-container").fadeOut("slow", function() {
             //target.parents(".question-container").siblings("."+hidden_question).first().removeClass(hidden_question).fadeIn("slow");
-            createAndDropGift(target);
+            if (correct) createAndDropGift(target)
+            else showNextQuestion();
           });
-        }
-        else {
-          target.parents(".question-container").fadeOut("slow", function() {
-            showNextQuestion();
-          });
-        }
+          }, 2000);
+        });
+        //else {
+        //  target.parents(".question-container").fadeOut("slow", function() {
+        //    showNextQuestion();
+        //  });
+        //}
       },
 
       //giftTween = TweenLite.to(".gift", 4, {top: 630, ease:Bounce.easeOut}),
@@ -237,7 +250,7 @@ Animation.mainFunction = (function() {
       });
       //santaGivesGift();
      $(".fb-share").on("click", function() {
-       $('.video-embed').hide();
+       //$('.video-embed').hide();
        $('.message-save').hide();
        $(this).hide();
        postCanvasToFacebook();
