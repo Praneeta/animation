@@ -85,7 +85,7 @@ Animation.mainFunction = (function() {
         if (nextQuestion.length) {
           nextQuestion.fadeIn("slow", function() {
             $(this).removeClass(hidden_question);
-            selectAndPlayVideo($(this), true)
+            if(Animation.video.display) selectAndPlayVideo($(this), true)
           });
         } else {
           $(questions_container).hide()
@@ -230,7 +230,7 @@ Animation.mainFunction = (function() {
     init: function() {
       if (Animation.trivia) {
         buildQuestionContainer();
-        selectAndPlayVideo($('.question-container:first'), true)
+        if(Animation.video.display) selectAndPlayVideo($('.question-container:first'), true)
       }
       $(".answer").on("click", function() {
         handleAnswerClick($(this));

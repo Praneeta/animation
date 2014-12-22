@@ -119,6 +119,8 @@
   color: #540f1e;
   text-shadow: -1px 0 #d9b309, 0 1px#d9b309, 1px 0#d9b309, 0 -1px#d9b309;
   top: 250px;
+  width: 500px;
+  height: 350px;
 }
 
 .harry-potter .edit-text {
@@ -138,6 +140,8 @@
 
 .harry-potter .snow {
   height: 560px;
+  position: absolute;
+  top: 0px;
 }
 
 .harry-potter .questions-container {
