@@ -163,13 +163,6 @@
   right: 0px;
 }
 
-.harry-potter .video-embed {
-  left: 840px;
-  top: 270px;
-  width: 211.2px;
-  height: 128.5px;
-}
-
 .harry-potter .fb-share {
   position: absolute;
   top: 180px;
@@ -522,4 +515,18 @@ div.lights a{
   font: 3em;
   bottom: 0px;
   color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .questions-container {
+    top: 625px;
+    width: 80%;
+    font-size: 5em;
+    height: 800px;
+  }
+
+  .message-text, .edit-text {
+    top: 650px ;
+    position: absolute;
+  }
 }
