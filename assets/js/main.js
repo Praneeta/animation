@@ -1,4 +1,5 @@
-var webSite = "http://localhost:8000",
+var Animation = Animation || {},
+    webSite = "Made this using http://www.makemyholidaycard.com",
     fileName = "christmasCard";
 
 
@@ -192,7 +193,6 @@ Animation.mainFunction = (function() {
         var xhr = new XMLHttpRequest();
         xhr.open( 'POST', 'https://graph.facebook.com/me/photos?access_token=' + authToken, true );
         xhr.onload = xhr.onerror = function() {
-          console.log( xhr.responseText );
         };
         xhr.setRequestHeader( "Content-Type", "multipart/form-data; boundary=" + boundary );
         xhr.sendAsBinary( formData );
