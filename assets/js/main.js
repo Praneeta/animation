@@ -1,4 +1,4 @@
-var webSite = "http://localhost:8000",
+var webSite = "Made this using http://www.makemyholidaycard.com",
     fileName = "christmasCard";
 
 
