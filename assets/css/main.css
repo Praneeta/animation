@@ -33,6 +33,7 @@
 
 .home-page ul img{
   width: 100px;
+  height: 60px;
 }
 
 .home-page li a{
@@ -504,4 +505,11 @@ div.lights a{
   z-index: 13;
   margin-left: 25px;
   cursor: pointer;
+}
+
+.footer {
+  position: absolute;
+  font: 3em;
+  bottom: 0px;
+  color: white;
 }
