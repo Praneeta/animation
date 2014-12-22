@@ -93,6 +93,12 @@
   left: 420px;
 }
 
+.snowman .fb-share{
+  top: 350px;
+  left: 400px;
+  position: absolute;
+}
+
 /** snowman end ***/
 
 /*** harry potter ***/
