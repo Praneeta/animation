@@ -104,6 +104,7 @@
   top: 350px;
   left: 400px;
   position: absolute;
+  z-index: 1;
 }
 
 /** snowman end ***/
@@ -460,9 +461,22 @@ div.lights a{
 .fb-share {
   background: url('../images/facebookShare.png') no-repeat;
   width: 245px;
-  height: 55px;
+  height: 46px;
   cursor: pointer;
   display: none;
+  z-index: 1;
+ /*Shadow*/
+  -webkit-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+}
+
+.fb-share:hover {
+  margin-top: 2px;
+  /*Shadow*/
+  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
 }
 
 .message {

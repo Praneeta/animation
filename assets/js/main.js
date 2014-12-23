@@ -1,5 +1,5 @@
 var Animation = Animation || {},
-    webSite = "Made this using http://www.makemyholidaycard.com",
+    webSite = "Made this using ",
     fileName = "christmasCard";
 
 
@@ -224,6 +224,7 @@ Animation.mainFunction = (function() {
             var encodedPng = data.substring(data.indexOf(',') + 1, data.length);
             var decodedPng = Base64Binary.decode(encodedPng);
             FB.getLoginStatus(function(response) {
+              webSite+= window.location.href;
               if (response.status === "connected") {
                 postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", decodedPng, webSite);
               } else if (response.status === "not_authorized") {
