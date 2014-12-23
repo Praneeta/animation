@@ -47,6 +47,25 @@
   left: 500px;
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #540f1e;
+    text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #540f1e;
+   text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #540f1e;
+   text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: #540f1e;
+   text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
+}
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
