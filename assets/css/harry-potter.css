@@ -1,0 +1,103 @@
+/*** harry potter ***/
+
+.page-body.harry-potter{
+  background-image: url('../images/harry-potter.jpg');
+  width: 1200px;
+  height: 625px;
+  color: #d9b309;
+}
+
+.harry-potter .message {
+  display: none;
+}
+
+.harry-potter .message,  .harry-potter .message-text{
+  color: #540f1e;
+  text-shadow: -1px 0 #d9b309, 0 1px#d9b309, 1px 0#d9b309, 0 -1px#d9b309;
+  top: 250px;
+  width: 500px;
+  height: 350px;
+}
+
+.harry-potter .edit-text {
+  top: 250px;
+}
+
+.harry-potter .message-save{
+  background-color: #d9b309;
+  color: #540f1e;
+}
+.harry-potter .tree {
+  left: 630px;
+  top: 86px;
+  height: 550px;
+  background-image: url('../images/christmas_tree_2.png');
+}
+
+.harry-potter .snow {
+  height: 560px;
+}
+
+.harry-potter .questions-container {
+  height: 270px;
+  left: 100px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 12px;
+}
+
+.harry-potter .gift-box {
+  background-image: url('../images/dumbledore.png');
+  right: 0px;
+}
+
+.harry-potter .fb-share {
+  position: absolute;
+  top: 180px;
+  left: 500px;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+  .page-body.harry-potter{
+    background-position: -200px;
+  }
+
+  .page-body.harry-potter.decorate {
+    background-position: -700px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .harry-potter.decorate .tree {
+    width: 950px;
+    display: block;
+    left: 34px;
+    top: 86px;
+  }
+
+  .harry-potter .questions-container {
+    display: block;
+    left: 10px;
+    width: 70%;
+  }
+
+  .harry-potter .snow {
+    height: 100%;
+  }
+
+  .harry-potter .tree, .harry-potter .gift-box{
+    display: none;
+  }
+  .harry-potter.decorate .gift-box{
+    display: block;
+  }
+
+}
+
+
+/*** avada kevadra ***/
