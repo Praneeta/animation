@@ -25,6 +25,7 @@
   left: 380px;
   top: 135px;
   cursor: pointer;
+  z-index: 5;
 }
 
 .snowman .gift-holder[title]:hover:after {
@@ -45,6 +46,38 @@
   top: 350px;
   left: 400px;
   position: absolute;
+  z-index: 6
+}
+
+.snowman .message {
+  height: 120px;
+  width: 600px;
+  left: 50px;
+  top: 20px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 12px;
+  color: #540f1e;
+  text-shadow: -1px 0 #d9b309, 0 1px#d9b309, 1px 0#d9b309, 0 -1px#d9b309;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #540f1e;
+    text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #540f1e;
+   text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #540f1e;
+   text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: #540f1e;
+   text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
 }
 
 /** snowman end ***/

@@ -56,7 +56,6 @@ window.fbAsyncInit = function() {
 
 Animation.mainFunction = (function() {
   var new_gift_class = "new-gift",
-      special_gift = ['', 'star-new', 'box', 'bear', 'star'],
       gift_num = 0,
       questions_container = ".questions-container",
       hidden_question = "hidden-question",
@@ -178,8 +177,9 @@ Animation.mainFunction = (function() {
 
       createAndDropGift = function(target) {
         var ornament = gift_num % 2
+          , totalSpecialGifts = Animation.special_gift.length;
         //special gift
-        if(gift_num % 3 === 0 && gift_num > 0) ornament = Animation.special_gift[gift_num / 3]
+        if(gift_num % 3 === 0 && gift_num > 0) ornament = Animation.special_gift[(gift_num / 3) % totalSpecialGifts]
         new_gift = $('<div class="gift ornament-' + ornament + '"></div>');
         new_gift.addClass(new_gift_class).attr('data-video-id', video_id).attr('data-play-video', 'true');
         if (Animation.trivia) {

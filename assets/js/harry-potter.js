@@ -2,7 +2,7 @@ Animation = {};
 Animation.trivia = true;
 Animation.giftDrop = 560;
 Animation.video = { height: "128.5", width: "211.2", display: false };
-Animation.special_gift = ['', 'star-new', 'snitch', 'box', 'bear'];
+Animation.special_gift = ['bear', 'star-new', 'snitch', 'box'];
 Animation.question_set = [
   {
     "question":"What is Dumbledore's sister's name?",
