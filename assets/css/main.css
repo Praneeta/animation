@@ -517,6 +517,27 @@ div.lights a{
   color: white;
 }
 
+.answer-options li {
+  margin-bottom: 10px;
+}
+
+.correct-answer {
+  background-image: url('../images/correct.png');
+}
+
+.wrong-answer {
+  background-image: url('../images/wrong.png');
+}
+
+.correct-answer, .wrong-answer {
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  margin-left: 5px;
+  display: inline-block;
+}
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
