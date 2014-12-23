@@ -319,10 +319,11 @@ div.lights a{
 
 .footer {
   position: absolute;
-  font: 3em;
+  font-size: 1em;
   bottom: 0px;
-  color: white;
+  margin-left: 20px;
 }
+
 
 .answer-options li {
   margin-bottom: 10px;

@@ -47,6 +47,10 @@
   left: 500px;
 }
 
+.footer a {
+  color: white;
+}
+
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: #540f1e;
     text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
