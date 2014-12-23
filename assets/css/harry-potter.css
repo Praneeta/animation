@@ -11,22 +11,6 @@
   display: none;
 }
 
-.harry-potter .message,  .harry-potter .message-text{
-  color: #540f1e;
-  text-shadow: -1px 0 #d9b309, 0 1px#d9b309, 1px 0#d9b309, 0 -1px#d9b309;
-  top: 250px;
-  width: 500px;
-  height: 350px;
-}
-
-.harry-potter .edit-text {
-  top: 250px;
-}
-
-.harry-potter .message-save{
-  background-color: #d9b309;
-  color: #540f1e;
-}
 .harry-potter .tree {
   left: 630px;
   top: 86px;
@@ -38,12 +22,18 @@
   height: 560px;
 }
 
-.harry-potter .questions-container {
+.harry-potter .questions-container, .harry-potter .message {
   height: 270px;
   left: 100px;
   padding: 10px;
   background-color: rgba(255,255,255,0.5);
   border-radius: 12px;
+  color: #540f1e;
+  text-shadow: -1px 0 #d9b309, 0 1px#d9b309, 1px 0#d9b309, 0 -1px#d9b309;
+}
+
+.harry-potter .questions-container {
+  text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
 }
 
 .harry-potter .gift-box {
@@ -80,8 +70,7 @@ and (max-device-width : 480px) {
     top: 86px;
   }
 
-  .harry-potter .questions-container {
-    display: block;
+  .harry-potter .questions-container, .harry-potter .message {
     left: 10px;
     width: 70%;
   }
@@ -93,7 +82,7 @@ and (max-device-width : 480px) {
   .harry-potter .tree, .harry-potter .gift-box, .harry-potter .gift {
     display: none;
   }
-  .harry-potter.decorate .gift-box, .harry-potter.decorate .gift {
+  .harry-potter.decorate .gift-box, .harry-potter.decorate .gift, .harry-potter .questions-container {
     display: block;
   }
 

@@ -267,20 +267,10 @@ Animation.mainFunction = (function() {
       });
       //santaGivesGift();
      $(".fb-share").on("click", function() {
-       //$('.video-embed').hide();
-       $('.message-save').hide();
        $(this).hide();
        postCanvasToFacebook();
      });
-     $('.message').on('click', function () {
-       $('.edit-text').show()
-       $('.message-text').focus()
-       $(this).hide()
-     })
-     $('.message-save').on('click', function () {
-       $('.edit-text').hide()
-       if($('.message-text').val()) $('.message').html($('.message-text').val())
-       $('.message').show()
+     $('.message').on('change', function () {
        $('.fb-share').show()
      })
      $('.gift-holder').on('click', function () {

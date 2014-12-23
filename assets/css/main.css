@@ -90,7 +90,7 @@ h1 {
   width: 149px;
 }
 
-.questions-container {
+.questions-container, .message {
   width: 500px;
   height: 400px;
   position: absolute;
@@ -101,6 +101,11 @@ h1 {
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   z-index: 97;
+}
+
+.message {
+  font-size: 3em;
+  font-family: fantasy; 
 }
 
 .hidden-question, .hidden {
@@ -281,16 +286,6 @@ div.lights a{
   }
 }
 
-.message-text {
-  width: 300px;
-  height: 200px;
-  background: transparent;
-  border: none;
-  z-index: 10;
-}
-.edit-text {
-  display: none;
-}
 
 .fb-share {
   background: url('../images/facebookShare.png') no-repeat;
@@ -315,47 +310,10 @@ div.lights a{
 
 .message {
   margin: 0;
-  top: 50px;
-  left: 140px;
   position: relative;
   cursor: pointer;
-  z-index: 12
-}
-
-.message-text, .message {
-  font-size: 3.5em;
-  font-family: fantasy;
-  font-weight: bold;
-  color: #B90009;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  width: 750px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 24px;
-  padding: 10px;
-}
-
-.edit-text {
-  position: relative;
-  top: 50px;
-  left: 140px;
-  width: 900px;
-  z-index: 11;
-}
-
-.message-save {
-  background-color: #B90009;
-  color: white;
-  font-size: 1.2em;
-  height: 40px;
-  width: 100px;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 9px;
+  z-index: 12;
   border: none;
-  position: absolute;
-  z-index: 13;
-  margin-left: 25px;
-  cursor: pointer;
 }
 
 .footer {
