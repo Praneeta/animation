@@ -1,0 +1,50 @@
+/*** snowman start ***/
+
+.page-body.snowman{
+  background-image: url('../images/snowman-bg.jpg');
+  width: 1050px;
+}
+
+.snowman .tree {
+  left: 550px;
+}
+
+.snowman .questions-container {
+  color: #B90009;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.snowman .snow {
+  width: 1050px;
+}
+
+.snowman .gift-holder {
+  width: 180px;
+  height: 200px;
+  position: absolute;
+  left: 380px;
+  top: 135px;
+  cursor: pointer;
+}
+
+.snowman .gift-holder[title]:hover:after {
+  content: attr(title);
+  font-size: 1.2em;
+  font-family: fantasy;
+  font-weight: bold;
+  color: #B90009;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.snowman .gift {
+  top: 250px;
+  left: 420px;
+}
+
+.snowman .fb-share{
+  top: 350px;
+  left: 400px;
+  position: absolute;
+}
+
+/** snowman end ***/
