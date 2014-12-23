@@ -80,4 +80,8 @@
    text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
 }
 
+.footer a {
+  color: #B00000;
+}
+
 /** snowman end ***/
