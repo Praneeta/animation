@@ -104,7 +104,11 @@ and (max-device-width : 480px) {
   .harry-potter.decorate .gift-box, .harry-potter.decorate .gift, .harry-potter .questions-container {
     display: block;
   }
-
+  .harry-potter .fb-share {
+    position: absolute;
+    top: 250px;
+    left: 10px;
+  }
 }
 
 
