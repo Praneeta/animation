@@ -139,6 +139,7 @@ Animation.mainFunction = (function() {
       //};
       removeNew = function(target) {
         target.removeClass(new_gift_class);
+        if(target.parents('.snowman').length) $('.page-body').addClass('decorate')
       },
       selectAndPlayVideo = function ($question, alwaysPlay) {
         var video_id = $question.attr('data-video-id')

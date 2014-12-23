@@ -46,7 +46,7 @@
   top: 350px;
   left: 400px;
   position: absolute;
-  z-index: 6
+  z-index: 6;
 }
 
 .snowman .message {
@@ -80,8 +80,63 @@
    text-shadow: -0.3px 0 #d9b309, 0 0.3px#d9b309, 0.3px 0#d9b309, 0 -0.3px#d9b309;
 }
 
-.footer a {
-  color: #B00000;
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+  .page-body.snowman{
+    background-position: -150px;
+  }
+
+  .page-body.snowman.decorate {
+    background-position: -400px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .snowman.decorate .tree {
+    width: 950px;
+    display: block;
+    left: 34px;
+    top: 86px;
+  }
+
+  .snowman .gift-holder {
+    top: 100px;
+    left: 200px;
+    z-index: 10;
+  }
+
+  .snowman .gift {
+    left: 300px;
+  }
+
+  .snowman .message {
+    left: 10px;
+    width: 70%;
+  }
+
+  .snowman .snow {
+    height: 100%;
+  }
+
+  .snowman .gift {
+    display: none;
+  }
+
+  .snowman.decorate .tree, .snowman.decorate .gift, .snowman .new-gift {
+    display: block;
+  }
+  .snowman .fb-share {
+    position: absolute;
+    top: 250px;
+    left: 10px;
+  }
 }
+
+
 
 /** snowman end ***/
