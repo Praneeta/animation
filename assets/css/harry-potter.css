@@ -90,10 +90,10 @@ and (max-device-width : 480px) {
     height: 100%;
   }
 
-  .harry-potter .tree, .harry-potter .gift-box{
+  .harry-potter .tree, .harry-potter .gift-box, .harry-potter .gift {
     display: none;
   }
-  .harry-potter.decorate .gift-box{
+  .harry-potter.decorate .gift-box, .harry-potter.decorate .gift {
     display: block;
   }
 

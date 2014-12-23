@@ -386,6 +386,11 @@ div.lights a{
   display: inline-block;
 }
 
+
+.fadeout {
+  opacity: 1;
+}
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
@@ -393,12 +398,20 @@ and (max-device-width : 480px) {
     max-width: 480px;
   }
 
-  .decorate .gift-box {
+  .decorate .gift-box, .decorate .gift {
     display: block;
   }
 
   .decorate .questions-container {
     display: none;
+  }
+  .decorate .fadeout {
+    -webkit-transition: all 4s ease-in-out;
+    -moz-transition: all 4s ease-in-out;
+    -ms-transition: all 4s ease-in-out;
+    -o-transition: all 4s ease-in-out;
+    transition: all 4s ease-in-out;
+    opacity: 0;
   }
 
 }
