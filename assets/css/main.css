@@ -1,5 +1,5 @@
 .page-body {
-  background-image: url('../images/Snowy-Village-BG.jpg');
+  /**background-image: url('../images/Snowy-Village-BG.jpg');**/
   background-repeat: no-repeat;
   width: 1200px;
   height: 700px;
@@ -460,21 +460,9 @@ div.lights a{
 .fb-share {
   background: url('../images/facebookShare.png') no-repeat;
   width: 245px;
-  height: 46px;
+  height: 55px;
   cursor: pointer;
   display: none;
-  /*Shadow*/
-  -webkit-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
-}
-
-.fb-share:hover {
-  margin-top: 2px;
-  /*Shadow*/
-  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
 }
 
 .message {
@@ -529,40 +517,57 @@ div.lights a{
   color: white;
 }
 
-<<<<<<< HEAD
-.answer-options li {
-  margin-bottom: 10px;
-}
-
-.correct-answer {
-  background-image: url('../images/correct.png');
-}
-
-.wrong-answer {
-  background-image: url('../images/wrong.png');
-}
-
-.correct-answer, .wrong-answer {
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-  background-size: 100%;
-  margin-left: 5px;
-  display: inline-block;
-}
-
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-  .questions-container {
-    top: 625px;
-    width: 80%;
-    font-size: 5em;
-    height: 800px;
+  .page-body.harry-potter{
+    background-position: -200px;
   }
 
-  .message-text, .edit-text {
-    top: 650px ;
-    position: absolute;
+  .page-body.harry-potter.decorate {
+    background-position: -700px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .harry-potter.decorate .tree {
+    width: 950px;
+    display: block;
+    left: 34px;
+    top: 86px;
+  }
+
+  .decorate .gift-box {
+    display: block;
+  }
+
+  .decorate .questions-container {
+    display: none;
+  }
+
+  .harry-potter .questions-container {
+    display: block;
+    left: 10px;
+    width: 28%;
+  }
+
+  .gift {
+    width: 100px;
+    height: 100px;
+  }
+
+  .harry-potter .snow {
+    height: 100%;
+  }
+
+  .harry-potter .tree, .harry-potter .gift-box{
+    display: none;
+  }
+
+  .message-text, .edit-text, .message-save {
+    /*top: 650px !important;
+    position: absolute;*/
   }
 }
