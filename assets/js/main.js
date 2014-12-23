@@ -227,6 +227,7 @@ Animation.mainFunction = (function() {
 
       postCanvasToFacebook = function() {
         $(".page-body").css("max-width", "1500px");
+        $(".tree, .gift, .gift-box").show()
         html2canvas($(".page-body"), {
           onrendered: function(canvas) {
                 //theCanvas = canvas;
