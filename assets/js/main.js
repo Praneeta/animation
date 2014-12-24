@@ -269,7 +269,10 @@ Animation.mainFunction = (function() {
       //santaGivesGift();
      $(".fb-share").on("click", function() {
        $(this).hide();
-       if (isMobile) $('.page-body').css('width', Animation.mobile.width)
+       if (isMobile) {
+        $('.page-body').css('width', Animation.mobile.width)
+        $('.page-body').css('background-position-x', '0px') 
+       }
        $('.message').html($('.message').val())
        postCanvasToFacebook();
      });
