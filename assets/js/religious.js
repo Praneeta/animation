@@ -36,7 +36,7 @@ Animation.question_set = [
   {
     "question":"What is a heavenly host ",
     "answers":["An Angel Army", "An Angel Choir", "The angel at the gate of heaven", "None of the above"],
-    "correct": 1
+    "correct": 0
   },
   {
     "question":"When the Angel came to Mary about Jesus, Mary and Joseph were..?",
@@ -49,14 +49,14 @@ Animation.question_set = [
     "correct": 2
   },
   {
-    "question":"What song did the Angel's sing?",
+    "question":"What song did the Angels sing?",
     "answers":["Joy to the world", "O little town of Bethlehem", "They did not sing they said", "Amazin Grace"],
     "correct": 2
   },
 
   {
     "question":"What are Magi",
-    "answers":["Astrologers", "Magicians", "Fortune tells", "Kings from Greece"],
+    "answers":["Astrologers", "Magicians", "Fortune tellers", "Kings from Greece"],
     "correct": 0
   }
 ]

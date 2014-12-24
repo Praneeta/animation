@@ -183,10 +183,10 @@ Animation.mainFunction = (function() {
         new_gift.addClass(new_gift_class).attr('data-video-id', video_id).attr('data-play-video', 'true');
         if (Animation.trivia) {
           var video_id = target.parents(".question-container").attr("data-video-id");
-          if (gift_num ==0) {
-            $(target).parents(questions_container).find(".gift-message").removeClass("hidden");
-            $(target).parents(questions_container).addClass('fadeout')
-          }
+          //if (gift_num ==0) {
+          $(target).parents(questions_container).find(".gift-message").removeClass("hidden");
+          $(target).parents(questions_container).addClass('fadeout')
+          //}
         }
         gift_num++;
         $('.tree').append(new_gift);
