@@ -46,7 +46,7 @@ Animation.question_set = [
   {
     "question":"Christmas has always been observed",
     "answers":["July 4th", "In peak of winter", "December 25", "It changes every year"],
-    "correct": 3
+    "correct": 2
   },
   {
     "question":"What song did the Angel's sing?",
