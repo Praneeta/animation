@@ -30,7 +30,7 @@ Animation.question_set = [
   },
   {
     "question":"Where did the wise men find Jesus",
-    "answers":["In a Manger", "In a stable", "Somewhere in UAE", "In a house"],
+    "answers":["In a Manger", "In a stable", "In a Temple", "In a house"],
     "correct": 3
   },
   {
@@ -39,7 +39,7 @@ Animation.question_set = [
     "correct": 1
   },
   {
-    "question":"When Mary became pregnant, Mary and Joseph were..?",
+    "question":"When the Angel came to Mary about Jesus, Mary and Joseph were..?",
     "answers":["Married", "Engaged", "Not related at all", "Cousins"],
     "correct": 1
   },
