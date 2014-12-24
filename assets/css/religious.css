@@ -41,8 +41,13 @@
 }
 
 .religious .gift-box {
-  background-image: url('../images/dumbledore.png');
-  right: 0px;
+  background-image: url('../images/angel.png');
+  width: 80px;
+  height: 93px;
+}
+
+.religious .gift {
+  left: 210px;
 }
 
 .religious .fb-share {
