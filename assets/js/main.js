@@ -227,7 +227,8 @@ Animation.mainFunction = (function() {
 
       postCanvasToFacebook = function() {
         $(".page-body").css("max-width", "1500px");
-        $(".tree, .gift, .gift-box").show()
+        $(".tree, .gift, .gift-box").show();
+        $(".no-share").hide();
         html2canvas($(".page-body"), {
           onrendered: function(canvas) {
                 //theCanvas = canvas;
@@ -239,6 +240,7 @@ Animation.mainFunction = (function() {
             var data = canvas.toDataURL("image/png");
             var encodedPng = data.substring(data.indexOf(',') + 1, data.length);
             var decodedPng = Base64Binary.decode(encodedPng);
+            $(".no-share").show();
             FB.getLoginStatus(function(response) {
               webSite+= window.location.href;
               if (response.status === "connected") {
