@@ -96,6 +96,7 @@ and (max-device-width : 480px) {
   .harry-potter .questions-container, .harry-potter .message {
     left: 10px;
     width: 70%;
+    max-width: 550px;
   }
 
   .harry-potter .snow {

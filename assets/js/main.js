@@ -87,7 +87,7 @@ Animation.mainFunction = (function() {
       },
 
       showNextQuestion = function() {
-        if (isMobile) $('.page-body').removeClass('decorate');
+        if (isMobile()) $('.page-body').removeClass('decorate');
         $(questions_container).find(".gift-message").addClass("hidden");
         var nextQuestion = $(questions_container).find("."+hidden_question).first()
         if (nextQuestion.length) {
@@ -117,7 +117,7 @@ Animation.mainFunction = (function() {
           target.parents(".question-container").fadeOut("slow", function() {
             //target.parents(".question-container").siblings("."+hidden_question).first().removeClass(hidden_question).fadeIn("slow");
             if (correct) {
-             if (isMobile) $('.page-body').addClass('decorate');
+             if (isMobile()) $('.page-body').addClass('decorate');
              createAndDropGift(target)
             }
             else showNextQuestion();
@@ -269,9 +269,9 @@ Animation.mainFunction = (function() {
       //santaGivesGift();
      $(".fb-share").on("click", function() {
        $(this).hide();
-       if (isMobile) {
+       if (isMobile()) {
         $('.page-body').css('width', Animation.mobile.width)
-        $('.page-body').css('background-position-x', '0px') 
+        $('.page-body').css('background-position-x', '0px')
        }
        $('.message').html($('.message').val())
        postCanvasToFacebook();
