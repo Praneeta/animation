@@ -120,8 +120,9 @@ and (max-device-width : 480px) {
   }
   .religious .fb-share {
     position: absolute;
-    top: 250px;
+    top: 360px;
     left: 10px;
+    height: auto;
   }
 }
 

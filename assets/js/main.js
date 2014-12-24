@@ -218,7 +218,7 @@ Animation.mainFunction = (function() {
         formData += message + '\r\n'
         formData += '--' + boundary + '--\r\n';
         var xhr = new XMLHttpRequest();
-        xhr.open( 'POST', 'https://graph.facebook.com/me/photos?access_token=' + authToken, true );
+        xhr.open( 'POST', '//graph.facebook.com/me/photos?access_token=' + authToken, true );
         xhr.onload = xhr.onerror = function() {
         };
         xhr.setRequestHeader( "Content-Type", "multipart/form-data; boundary=" + boundary );
