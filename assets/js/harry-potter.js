@@ -1,6 +1,8 @@
 Animation = {};
 Animation.trivia = true;
 Animation.giftDrop = 560;
+Animation.mobile = {}
+Animation.mobile.width = '1080px';
 Animation.video = { height: "128.5", width: "211.2", display: false };
 Animation.special_gift = ['bear'  , 'star-new', 'snitch', 'box'];
 Animation.question_set = [
