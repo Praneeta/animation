@@ -9,11 +9,6 @@
   left: 550px;
 }
 
-.snowman .questions-container {
-  color: #B90009;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
 .snowman .snow {
   width: 1050px;
 }
@@ -39,7 +34,7 @@
 
 .snowman .gift {
   top: 250px;
-  left: 420px;
+  left: -10px;
 }
 
 .snowman .fb-share{
@@ -110,13 +105,10 @@ and (max-device-width : 480px) {
     z-index: 10;
   }
 
-  .snowman .gift {
-    left: 300px;
-  }
-
   .snowman .message {
     left: 10px;
     width: 70%;
+    max-width: 550px;
   }
 
   .snowman .snow {

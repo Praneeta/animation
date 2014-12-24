@@ -116,7 +116,6 @@ Animation.mainFunction = (function() {
           target.parents(".question-container").fadeOut("slow", function() {
             //target.parents(".question-container").siblings("."+hidden_question).first().removeClass(hidden_question).fadeIn("slow");
             if (correct) {
-             if (isMobile()) $('.page-body').addClass('decorate');
              createAndDropGift(target)
             }
             else showNextQuestion();
@@ -190,7 +189,8 @@ Animation.mainFunction = (function() {
           }
         }
         gift_num++;
-        $('.page-body').append(new_gift);
+        $('.tree').append(new_gift);
+        if (isMobile()) $('.page-body').addClass('decorate');
         TweenLite.to("."+new_gift_class, 1, {top: Animation.giftDrop,
           ease:Bounce.easeOut, onComplete:function(){
             Draggable.create(new_gift, {onDragEnd: dragEnd})
@@ -273,8 +273,10 @@ Animation.mainFunction = (function() {
        if (isMobile()) {
         $('.page-body').css('width', Animation.mobile.width)
         $('.page-body').css('background-position-x', '0px')
+        if(Animation.mobile.message) $('.message').css('left', Animation.mobile.message)
        }
        $('.message').html($('.message').val())
+       //fixOrnamentPosition();
        postCanvasToFacebook();
      });
      $('.message').on('click', function () {

@@ -27,7 +27,6 @@ h1 {
   height: 50px;
   display: inline-block;
   position: absolute;
-  right: 150px;
   top: 90px;
   z-index: 9 !important;
 }
