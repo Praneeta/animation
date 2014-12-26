@@ -202,27 +202,45 @@ Animation.mainFunction = (function() {
         if($gift.attr('data-play-video') === 'true') showNextQuestion();
         $gift.attr('data-play-video', 'false')
       },
-      postImageToFacebook = function(authToken, filename, mimeType, imageData, message) {
-        // this is the multipart/form-data boundary we'll use
-        var boundary = '----ThisIsTheBoundary1234567890';
-        // let's encode our image file, which is contained in the var
-        var formData = '--' + boundary + '\r\n';
-          formData += 'Content-Disposition: form-data; name="source"; filename="' + filename + '"\r\n';
-        formData += 'Content-Type: ' + mimeType + '\r\n\r\n';
-        for ( var i = 0, imageLength=imageData.length; i < imageLength; ++i ) {
-          formData += String.fromCharCode( imageData[ i ] & 0xff );
+
+      dataURItoBlob = function(dataURI) {
+        var byteString = atob(dataURI.split(',')[1]);
+        var ab = new ArrayBuffer(byteString.length);
+        var ia = new Uint8Array(ab);
+        for (var i = 0; i < byteString.length; i++) {
+              ia[i] = byteString.charCodeAt(i);
         }
-        formData += '\r\n';
-        formData += '--' + boundary + '\r\n';
-        formData += 'Content-Disposition: form-data; name="message"\r\n\r\n';
-        formData += message + '\r\n'
-        formData += '--' + boundary + '--\r\n';
-        var xhr = new XMLHttpRequest();
-        xhr.open( 'POST', '//graph.facebook.com/me/photos?access_token=' + authToken, true );
-        xhr.onload = xhr.onerror = function() {
-        };
-        xhr.setRequestHeader( "Content-Type", "multipart/form-data; boundary=" + boundary );
-        xhr.sendAsBinary( formData );
+        return new Blob([ab], {
+              type: 'image/png'
+        });
+      }
+      postImageToFacebook = function(authToken, filename, mimeType, imageData, message) {
+        try {
+          blob = dataURItoBlob(imageData);
+        } catch (e) {
+          alert("Could not Porcess your image. Please try again");
+          return false;
+        }
+        var fd = new FormData();
+        fd.append("access_token", authToken);
+        fd.append("source", blob);
+        fd.append("message", "Made this using http://www.makemyholidaycard.com");
+        $.ajax({
+          url: "https://graph.facebook.com/me/photos?access_token=" + authToken,
+          type: "POST",
+          data: fd,
+          processData: false,
+          contentType: false,
+          success: function (data) {
+            console.log("success " + data);
+          },
+          error: function (shr, status, data) {
+            console.log("error " + data + " Status " + shr.status);
+          },
+          complete: function () {
+            console.log("Posted to facebook");
+          }
+        });
       },
 
       postCanvasToFacebook = function() {
@@ -231,27 +249,19 @@ Animation.mainFunction = (function() {
         $(".no-share").hide();
         html2canvas($(".page-body"), {
           onrendered: function(canvas) {
-                //theCanvas = canvas;
-                //document.body.appendChild(canvas);
-                //  var image = $('.canvas-outcome img');
-                //  debugger;
-                //  image.attr("src", canvas.toDataURL("image/png"));
-            //}
-            var data = canvas.toDataURL("image/png");
-            var encodedPng = data.substring(data.indexOf(',') + 1, data.length);
-            var decodedPng = Base64Binary.decode(encodedPng);
+            var imageData = canvas.toDataURL("image/png");
             $(".no-share").show();
             FB.getLoginStatus(function(response) {
               webSite+= window.location.href;
               if (response.status === "connected") {
-                postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", decodedPng, webSite);
+                postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", imageData, webSite);
               } else if (response.status === "not_authorized") {
                 FB.login(function(response) {
-                  postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", decodedPng, webSite);
+                  postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", imageData, webSite);
                  }, {scope: "publish_actions"});
               } else {
                 FB.login(function(response)  {
-                  postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", decodedPng, webSite);
+                  postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", imageData, webSite);
                 }, {scope: "publish_actions"});
              }
             });
