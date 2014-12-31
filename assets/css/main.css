@@ -24,3 +24,20 @@
 .home-page .row {
   padding-bottom: 20px;
 }
+
+.image-container {
+  position: relative;
+}
+
+.mobile-share {
+  position: absolute;
+  top: 10px;
+}
+
+.list-group-item {
+  background-color: transparent;
+}
+
+.home-icon {
+  color: blue;
+}
