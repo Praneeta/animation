@@ -41,3 +41,10 @@
 .home-icon {
   color: blue;
 }
+
+
+.home-page .share-buttons {
+  position: absolute;
+  top: 0;
+  width: 50px;
+}
