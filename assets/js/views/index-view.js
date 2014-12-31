@@ -1,4 +1,3 @@
-/*global Backbone, jQuery, _, ENTER_KEY */
 var app = app || {};
 
 (function ($) {
@@ -9,16 +8,20 @@ var app = app || {};
 
   // Our overall **AppView** is the top-level piece of UI.
   app.IndexView = Backbone.View.extend({
-    el: '.card-list',
-    template: app.index.card,
+    el: '.page-content',
+    templates: app.templates.index,
     initialize: function () {
-      this.collection = app.christmas.cards
+      this.$el.empty()
+      $('.page-body').attr('class', 'page-body home-page')
+      var template = _.template(this.templates.content);
+      this.$el.append(template())
+      this.collection = app.data.christmas.cards
       this.render()
     },
     render: function(){
       this.collection.forEach(function(card){
-        var template = _.template(this.template);
-        this.$el.append(template({card: card}));
+        var template = _.template(this.templates.card);
+        this.$('.card-list').append(template({card: card}));
       }.bind(this));
     }
   });
