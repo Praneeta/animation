@@ -1,3 +1,26 @@
 .container {
   background-color: #000;
 }
+.home-page {
+  background-image: url("../images/bg.gif");
+}
+
+.home-page .contact {
+  color: #fff;
+}
+
+.home-page .h1 {
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 3em;
+}
+
+.home-page .container {
+  background-color: transparent;
+}
+
+.home-page .row {
+  padding-bottom: 20px;
+}
