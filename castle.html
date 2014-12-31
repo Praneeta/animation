@@ -19,18 +19,36 @@
        js = d.createElement(s); js.id = id;
        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=897326893619716&version=v2.0";
        fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));</script>
+       }(document, 'script', 'facebook-jssdk'));
+     </script>
     <div class="container">
       <div class="row">
          <div class="col-md-8">
            <img class="card-image" src="/assets/images/castle.jpg" >
          </div>
          <div class="col-md-4">
-           share buttons
+           <ul class="list-group">
+             <li class="list-group-item">
+               <div class="fb-share-button" data-href="/castle.html" data-layout="button"></div>
+             </li>
+             <li class="list-group-item">
+               <a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red" data-pin-height="28">
+                 <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png" />
+               </a>
+             </li>
+             <li class="list-group-item visible-xs">
+               <a href="whatsapp://send" data-text="Share on WhatsApp" data-href="" class="wa_btn wa_btn_m" style="display:none">Share</a>
+             </li>
+             <li class="list-group-item">
+               <a href="/">Browse More Cards</a>
+             </li>
+           </ul>
          </div>
       </div>
       <div class='footer'>Contact us at: makemyholidaycard@gmail.com</div>
     </div>
+     <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+     <script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="/assets/js/whatsapp-button.js";h.appendChild(s);}</script>
   </body>
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.1/custom/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
