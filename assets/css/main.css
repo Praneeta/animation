@@ -7,6 +7,7 @@
 
 .home-page .contact {
   color: #fff;
+  margin-top: 20px;
 }
 
 .home-page .h1 {
@@ -21,9 +22,6 @@
   background-color: transparent;
 }
 
-.home-page .row {
-  padding-bottom: 20px;
-}
 
 .image-container {
   position: relative;
@@ -48,3 +46,13 @@
   top: 0;
   width: 50px;
 }
+
+.empty-div {
+  height: 15px;
+}
+
+@media (max-width: 480px) {
+  .col-md-3 {
+    margin: 8px auto;
+  }
+ }
