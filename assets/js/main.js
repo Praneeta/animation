@@ -28,5 +28,5 @@ Animation.mainFunction = (function() {
 })();
 
 $(document).ready(function() {
-  Animation.mainFunction.init();
+  //Animation.mainFunction.init();
 });
