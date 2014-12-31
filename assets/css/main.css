@@ -40,7 +40,6 @@
   color: blue;
 }
 
-
 .home-page .share-buttons {
   position: absolute;
   top: 0;
@@ -49,6 +48,10 @@
 
 .empty-div {
   height: 15px;
+}
+
+.card-holder {
+  position: relative;
 }
 
 @media (max-width: 480px) {
