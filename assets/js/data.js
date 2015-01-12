@@ -2,7 +2,15 @@ var app = app || {};
 
 app.data = {}
 
+app.data.new_year = {}
+
+app.data.new_year.simple = true
+
+
+
 app.data.christmas = {}
+
+app.data.christmas.simple = false
 
 app.data.christmas['classic'] = {
   "id": 1,

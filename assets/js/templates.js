@@ -3,6 +3,19 @@ var app = app || {};
 
 app.templates = {};
 
+app.templates.meta = {
+  meta: "<meta charset=\"UTF-8\">"
+  + "<title><%= title %></title>"
+  + "<meta name=\"keywords\" content=\"<%= metaData %>\">"
+  + "<meta name=\"description\" content=\"<%= title %>\">"
+  + "<meta property=\"og:title\" content=\"<%= title %>\" />"
+  + "<meta property=\"og:description\" content=\"<%= description %>\" />"
+  + "<meta property=\"og:image\" content=\"/assets/images/<%= image %>.jpg\" />"
+  + "<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0; maximum-scale=1.0;\"/>"
+  + "<link rel=\"icon\" type=\"image/png\" href=\"assets/images/<%= icon %>.png\" />"
+  + "<link rel=\"apple-touch-icon\" type=\"image/png\" href=\"assets/images/<%= icon %>.png\"/>"
+}
+
 app.templates.index = {}
 
 app.templates.index.content = "<h1>Merry Christmas</h1><ul class=\"card-list\"></ul><div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
