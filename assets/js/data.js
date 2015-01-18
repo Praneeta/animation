@@ -2,13 +2,25 @@ var app = app || {};
 
 app.data = {}
 
+app.data.current = {}
+
+app.data.current.holiday = 'christmas'
+
 app.data.new_year = {}
 
 app.data.new_year.simple = true
 
-
+app.data.new_year = ['funny', 'lily', 'flowers', 'hearts', 'seattle', 'castle', 'success', 'biblical', 'sunset', 'earth', 'sydney', 'chalk']
 
 app.data.christmas = {}
+
+app.data.christmas.meta = {
+  title: 'Merry Christmas'
+, keywords: 'cards, free, christmas'
+, description: 'some description'
+, image: 'simple-bg'
+, icon: 'ornament_1'
+}
 
 app.data.christmas.simple = false
 

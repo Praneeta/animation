@@ -15,7 +15,11 @@ var app = app || {};
 
   app.Router = new Router();
   app.Router.on("route:showCard", function(category, slug) {
-    new app.CardView(category, slug);
+		if (app.data[category].simple) {
+			new app.SimpleCardView(category, slug);
+		} else {
+    	new app.CardView(category, slug);
+		}
   });
   app.Router.on("route:index", function() {
     new app.IndexView();

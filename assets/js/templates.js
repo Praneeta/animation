@@ -3,10 +3,9 @@ var app = app || {};
 
 app.templates = {};
 
-app.templates.meta = {
-  meta: "<meta charset=\"UTF-8\">"
+app.templates.meta = "<meta charset=\"UTF-8\">"
   + "<title><%= title %></title>"
-  + "<meta name=\"keywords\" content=\"<%= metaData %>\">"
+  + "<meta name=\"keywords\" content=\"<%= keywords %>\">"
   + "<meta name=\"description\" content=\"<%= title %>\">"
   + "<meta property=\"og:title\" content=\"<%= title %>\" />"
   + "<meta property=\"og:description\" content=\"<%= description %>\" />"
@@ -14,17 +13,15 @@ app.templates.meta = {
   + "<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0; maximum-scale=1.0;\"/>"
   + "<link rel=\"icon\" type=\"image/png\" href=\"assets/images/<%= icon %>.png\" />"
   + "<link rel=\"apple-touch-icon\" type=\"image/png\" href=\"assets/images/<%= icon %>.png\"/>"
-}
-
-app.templates.index = {}
-
-app.templates.index.content = "<h1>Merry Christmas</h1><ul class=\"card-list\"></ul><div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
-
-app.templates.index.card = "<li class=\"card\"><a class=\"card-link\" href=\"cards/christmas/<%= card.slug %>\"><img class=\"card-img\" src=\"assets/images/<%= card.img %>\"/><%= card.title %></a></li>"
 
 app.templates.cards = {}
 
 app.templates.cards.christmas = {}
+
+app.templates.cards.christmas.index = {
+  content: "<h1>Merry Christmas</h1><ul class=\"card-list\"></ul><div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
+, card: "<li class=\"card\"><a class=\"card-link\" href=\"cards/christmas/<%= card.slug %>\"><img class=\"card-img\" src=\"assets/images/<%= card.img %>\"/><%= card.title %></a></li>"
+}
 
 app.templates.cards.question = "<div class='question-container'><%= question %></div>"
 + "<div class='answer-options'><ul></ul></div>"
