@@ -9,43 +9,33 @@ app.templates.meta = "<meta charset=\"UTF-8\">"
   + "<meta name=\"description\" content=\"<%= title %>\">"
   + "<meta property=\"og:title\" content=\"<%= title %>\" />"
   + "<meta property=\"og:description\" content=\"<%= description %>\" />"
-  + "<meta property=\"og:image\" content=\"/assets/images/<%= image %>.jpg\" />"
+  + "<meta property=\"og:image\" content=\"/assets/images/<%= image %>\" />"
   + "<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0; maximum-scale=1.0;\"/>"
-  + "<link rel=\"icon\" type=\"image/png\" href=\"assets/images/<%= icon %>.png\" />"
-  + "<link rel=\"apple-touch-icon\" type=\"image/png\" href=\"assets/images/<%= icon %>.png\"/>"
+  + "<link rel=\"icon\" type=\"image/png\" href=\"assets/images/<%= icon %>\" />"
+  + "<link rel=\"apple-touch-icon\" type=\"image/png\" href=\"assets/images/<%= icon %>\"/>"
 
 app.templates.cards = {}
 
-
-app.templates.cards.new_year = {
-  index: {
-    content: "<h1>Happy New Year</h1><div class=\"container\"></div><div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
-  , card: "<div class=\"col-md-3 card-holder\">"
-        + "  <a href=\"/<%= card %>.html\"> <img class=\"img-thumbnail\" class=\"img-responsive\" src=\"/assets/images/<%= card %>.jpg\" alt=\"happy new year\"></a>"
-        + "  <ul class=\"list-group share-buttons\">"
-        + "    <li class=\"list-group-item\">"
-        + "      <div class=\"fb-share-button\" data-href=\"https://www.makemyholidaycard.com/funny.html\" data-layout=\"icon\"></div>"
-        + "    </li>"
-        + "    <li class=\"list-group-item visible-xs\">"
-        + "      <a href=\"whatsapp://send\" data-text=\"Happy New Year\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" class=\"wa_btn wa_btn_s\"></a>"
-        + "    </li>"
-        + "    <li class=\"list-group-item\">"
-        + "      <a href=\"//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmakemyholidaycard.com%2F<%= card %>.html&media=https%3A%2F%2Fmakemyholidaycard.com%2Fassets%2Fimages%2F<%= card %>.jpg&description=Happy%20New%20Year\" data-pin-do=\"buttonBookmark\"  data-pin-shape=\"round\"><img src=\"//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_16.png\" /></a>"
-        + "    </li>"
-        + "  </ul>"
-        + "</div>"
-  }
+app.templates.cards.index = {
+  content: "<h1 class=\"h1\"><span style=\"color: #FF9933\">Happy </span><span style=\"color: #000080\">Republic </span><span style=\"color: #138808\">Day</span></h1>"
+      + "<div class=\"container\"></div>"
+      + "<div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
+, card: "<div class=\"col-md-3 card-holder\">"
+      + "  <a href=\"/<%= card %>.html\"> <img class=\"img-thumbnail\" class=\"img-responsive\" src=\"/assets/images/<%= card %>.jpg\" alt=\"happy new year\"></a>"
+      + "  <ul class=\"list-group share-buttons\">"
+      + "    <li class=\"list-group-item\">"
+      + "      <div class=\"fb-share-button\" data-href=\"https://www.makemyholidaycard.com/funny.html\" data-layout=\"icon\"></div>"
+      + "    </li>"
+      + "    <li class=\"list-group-item visible-xs\">"
+      + "      <a href=\"whatsapp://send\" data-text=\"Happy New Year\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" class=\"wa_btn wa_btn_s\"></a>"
+      + "    </li>"
+      + "    <li class=\"list-group-item\">"
+      + "      <a href=\"//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmakemyholidaycard.com%2F<%= card %>.html&media=https%3A%2F%2Fmakemyholidaycard.com%2Fassets%2Fimages%2F<%= card %>.jpg&description=Happy%20New%20Year\" data-pin-do=\"buttonBookmark\"  data-pin-shape=\"round\"><img src=\"//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_16.png\" /></a>"
+      + "    </li>"
+      + "  </ul>"
+      + "</div>"
 }
 
-
-
-
-app.templates.cards.christmas = {}
-
-app.templates.cards.christmas.index = {
-  content: "<div class=\"snow\"></div><h1>Merry Christmas</h1><ul class=\"card-list\"></ul><div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
-, card: "<li class=\"card\"><a class=\"card-link\" href=\"cards/christmas/<%= card.slug %>\"><img class=\"card-img\" src=\"assets/images/<%= card.img %>\"/><%= card.title %></a></li>"
-}
 
 app.templates.cards.question = "<div class='question-container'><%= question %></div>"
 + "<div class='answer-options'><ul></ul></div>"
@@ -54,7 +44,7 @@ app.templates.cards.answerOption = "<li class='answer'><%= option %></li>"
 
 app.templates.cards.reward = "<div class=\"gift new-gift <%= reward %>\"></div>"
 
-app.templates.cards.christmas.content = "<div class=\"snow\"></div><textarea class=\"message\" rows=3 placeholder=\"type your holiday message here...\"></textarea>" +
+app.templates.cards.content = "<div class=\"snow\"></div><textarea class=\"message\" rows=3 placeholder=\"type your holiday message here...\"></textarea>" +
 "<div class=\"fb-share\"></div>" +
 "<div class=\"gift-holder\" title=\"click to get ornaments\"></div>" +
 "<div class=\"tree canvas\"></div>" +
@@ -62,6 +52,6 @@ app.templates.cards.christmas.content = "<div class=\"snow\"></div><textarea cla
 "<div class=\"questions-container\"></div>" +
 "<div class=\"footer no-share\"><a href=\"/\">Make a different card</a></div>"
 
-app.templates.cards.christmas.correct = "<div class=\"gift-message hidden\">Congratulations!! Place your ornament on the tree relive the magic of Christmas!</div>"
+app.templates.cards.correct = "<div class=\"gift-message hidden\">Congratulations!! Place your ornament on the tree relive the magic of Christmas!</div>"
 
-app.templates.cards.christmas.reward = 'ornament'
+app.templates.cards.reward = 'ornament'

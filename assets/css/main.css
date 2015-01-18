@@ -178,11 +178,6 @@ h1 {
   cursor: pointer;
 }
 
-body {
-  background-color:#000;
-  margin: 0;
-}
-
 .save-image {
   color: blue;
   z-index: 2;
