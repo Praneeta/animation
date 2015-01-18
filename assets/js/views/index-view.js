@@ -24,7 +24,7 @@ var app = app || {};
     render: function(){
       this.collection.forEach(function(card){
         var template = _.template(this.templates.card);
-        this.$('.card-list').append(template({card: card}));
+        this.$('.container').append(template({card: card}));
       }.bind(this));
     }
   });
