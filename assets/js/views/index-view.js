@@ -22,9 +22,14 @@ var app = app || {};
       this.render()
     },
     render: function(){
-      this.collection.forEach(function(card){
-        var template = _.template(this.templates.card);
-        this.$('.container').append(template({card: card}));
+      var newRow
+        , template = _.template(this.templates.card);
+      this.collection.forEach(function(card, index){
+        if(index % 4 === 0) {
+          newRow = $('<div class="row"></div>')
+          this.$('.container').append('<div class="empty-div"></div>').append(newRow)
+        }
+        newRow.append(template({card: card}));
       }.bind(this));
     }
   });

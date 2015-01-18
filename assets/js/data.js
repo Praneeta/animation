@@ -3,7 +3,7 @@ var app = app || {};
 app.data = {}
 
 app.data.current = {
-  holiday: 'new_year'
+  holiday: 'christmas'
 }
 
 app.data.new_year = {}
