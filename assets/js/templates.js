@@ -21,10 +21,10 @@ app.templates.cards.index = {
       + "<div class=\"container\"></div>"
       + "<div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
 , card: "<div class=\"col-md-3 card-holder\">"
-      + "  <a href=\"/<%= card %>.html\"> <img class=\"img-thumbnail\" class=\"img-responsive\" src=\"/assets/images/<%= card %>.jpg\" alt=\"happy new year\"></a>"
+      + "  <a href=\"/cards/<%= card %>\"> <img class=\"img-thumbnail\" class=\"img-responsive\" src=\"/assets/images/<%= card %>.jpg\" alt=\"happy new year\"></a>"
       + "  <ul class=\"list-group share-buttons\">"
       + "    <li class=\"list-group-item\">"
-      + "      <div class=\"fb-share-button\" data-href=\"https://www.makemyholidaycard.com/funny.html\" data-layout=\"icon\"></div>"
+      + "      <div class=\"fb-share-button\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" data-layout=\"icon\"></div>"
       + "    </li>"
       + "    <li class=\"list-group-item visible-xs\">"
       + "      <a href=\"whatsapp://send\" data-text=\"Happy New Year\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" class=\"wa_btn wa_btn_s\"></a>"
@@ -44,13 +44,38 @@ app.templates.cards.answerOption = "<li class='answer'><%= option %></li>"
 
 app.templates.cards.reward = "<div class=\"gift new-gift <%= reward %>\"></div>"
 
-app.templates.cards.content = "<div class=\"snow\"></div><textarea class=\"message\" rows=3 placeholder=\"type your holiday message here...\"></textarea>" +
-"<div class=\"fb-share\"></div>" +
-"<div class=\"gift-holder\" title=\"click to get ornaments\"></div>" +
-"<div class=\"tree canvas\"></div>" +
-"<div class=\"gift-box\"></div>" +
-"<div class=\"questions-container\"></div>" +
-"<div class=\"footer no-share\"><a href=\"/\">Make a different card</a></div>"
+app.templates.cards.content = "<div class=\"container\">"
+    + "<div class=\"row\">"
+    + "   <div class=\"col-md-8 image-container\">"
+    + "     <img class=\"card-image\" src=\"/assets/images/<%= card %>.jpg\" >"
+    + "   </div>"
+    + "   <div class=\"col-md-4\">"
+    + "     <ul class=\"list-group\">"
+    + "       <li class=\"list-group-item\">"
+    + "         <div class=\"fb-share-button\" data-href=\"/<%= card %>.html\" data-layout=\"button\"></div>"
+    + "       </li>"
+    + "       <li class=\"list-group-item\">"
+    + "         <a href=\"//www.pinterest.com/pin/create/button/\"  data-pin-do=\"buttonBookmark\"  data-pin-color=\"red\" data-pin-height=\"28\">"
+    + "          <img src=\"//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png\" />"
+    + "         </a>"
+    + "       </li>"
+    + "       <li class=\"list-group-item visible-xs\">"
+    + "         <a href=\"whatsapp://send\" data-text=\"Happy New Year\" data-href=\"\" class=\"wa_btn wa_btn_m\" style=\"display:none\">Share</a>"
+    + "       </li>"
+    + "       <li class=\"list-group-item\">"
+    + "         <a href=\"/chalk.html\">&lt;&lt;Prev</a>"
+    + "         <a href=\"/lily.html\" class=\"pull-right\">Next&gt;&gt;</a>"
+    + "       </li>"
+    + "       <li class=\"list-group-item\">"
+    + "         <a href=\"/\">Browse More Cards</a>"
+    + "       </li>"
+    + "     </ul>"
+    + "   </div>"
+    + "</div>"
+    + "<textarea class=\"message\" rows=3 placeholder=\"type your holiday message here...\"></textarea>"
+    + "<div class=\"fb-share\"></div>"
+    + "<div class=\"questions-container\"></div>"
+    + "</div>"
 
 app.templates.cards.correct = "<div class=\"gift-message hidden\">Congratulations!! Place your ornament on the tree relive the magic of Christmas!</div>"
 

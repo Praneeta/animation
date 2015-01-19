@@ -8,18 +8,14 @@ var app = app || {};
 	var Router = Backbone.Router.extend({
 		routes: {
       'index': 'index',
-			'cards/:category/:slug': 'showCard',
+			'cards/:slug': 'showCard',
       '': 'index'
 		}
 	});
 
   app.Router = new Router();
-  app.Router.on("route:showCard", function(category, slug) {
-		if (app.data[category].simple) {
-			new app.SimpleCardView(category, slug);
-		} else {
-    	new app.CardView(category, slug);
-		}
+  app.Router.on("route:showCard", function(slug) {
+		new app.CardView(slug);
   });
   app.Router.on("route:index", function() {
     new app.IndexView();

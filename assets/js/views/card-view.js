@@ -13,16 +13,15 @@ var app = app || {};
       'click .answer': 'checkAnswer'
     },
     rewardNum: 0,
-    templates: app.templates.cards,
     category: undefined,
     slug: undefined,
-    initialize: function (category, slug) {
-      var template = _.template(this.templates[category].content)
-      this.model = app.data[category][slug]
-      this.category = category
+    initialize: function (slug) {
+      var template = _.template(app.templates.cards.content)
+      this.model = app.data.cards.details
       this.slug = slug
       this.$el.empty()
-      this.$el.append(template)
+      console.log('slug', slug)
+      this.$el.append(template({card: slug}))
       $('.page-body').attr('class', 'page-body ' + slug)
       this.render()
     },
@@ -34,7 +33,7 @@ var app = app || {};
     },
     getRewardName: function (){
       var reward = this.rewardNum % 2
-        , rewardType = this.templates[this.category]['reward']
+        , rewardType = app.templates.cards['reward']
 
       //every 4th gift is special gift
       if(this.rewardNum % 3 === 0 && this.rewardNum > 0) reward = this.model.gift[(this.rewardNum / 3) % this.model.gift.length]
@@ -42,7 +41,7 @@ var app = app || {};
       return rewardType + '-' + reward
     },
     share: function (){
-      
+
     }
   });
 })(jQuery);
