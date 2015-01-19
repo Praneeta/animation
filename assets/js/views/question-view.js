@@ -38,14 +38,7 @@ var app = app || {};
         $answerOptions.append(answer_template({option: option}));
       }.bind(this));
     },
-    checkAnswer: function (event) {
-      var selectedAnswer = $(event.target).text()
-        , correctAnswer = this.current_question.answers[this.current_question.correct]
-        , answeredCorrectly = selectedAnswer === correctAnswer
-        , answer =  answeredCorrectly? 'correct-answer' : 'wrong-answer'
-
-      $(event.target).append('<span class="' + answer + '"></span>')
-
+    processAnswer: function(answeredCorrectly) {
       if(this.question < (this.collection.length -1) ) {
         this.question++;
         this.showNextQuestion()
@@ -54,6 +47,19 @@ var app = app || {};
       }
 
       if (answeredCorrectly) this.parentView.reward()
+    },
+    checkAnswer: function (event) {
+      var selectedAnswer = $(event.target).text()
+        , correctAnswer = this.current_question.answers[this.current_question.correct]
+        , answeredCorrectly = selectedAnswer === correctAnswer
+        , answer =  answeredCorrectly? 'correct-answer' : 'wrong-answer'
+
+      $(event.target).append('<span class="' + answer + '"></span>')
+      //_.delay(this.processAnswer, 2000, answeredCorrectly);
+      _(function() {
+        this.processAnswer(answeredCorrectly);
+      }).chain().bind(this).delay(2000);
+
     }
   });
 })(jQuery);

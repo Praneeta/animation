@@ -42,10 +42,10 @@ app.templates.cards.question = "<div class='question-container'><%= question %><
 
 app.templates.cards.answerOption = "<li class='answer'><%= option %></li>"
 
-app.templates.cards.reward = "<div class=\"gift new-gift <%= reward %>\"></div>"
+app.templates.cards.reward = "<div class=\"gift new-gift\" style=\"background-color:red; width: 100px; height: 100px;\"></div>"
 
 app.templates.cards.content = "<div class=\"container\">"
-    + "<div class=\"row\">"
+    + "<div class=\"row canvas\">"
     + "   <div class=\"col-md-8 image-container\">"
     + "     <img class=\"card-image\" src=\"/assets/images/<%= card %>.jpg\" >"
     + "   </div>"
@@ -77,6 +77,4 @@ app.templates.cards.content = "<div class=\"container\">"
     + "<div class=\"questions-container\"></div>"
     + "</div>"
 
-app.templates.cards.correct = "<div class=\"gift-message hidden\">Congratulations!! Place your ornament on the tree relive the magic of Christmas!</div>"
-
-app.templates.cards.reward = 'ornament'
+app.templates.cards.correct = "<div class=\"gift-message hidden\">Congratulations!! Place your reward on your card and show off your knowlede!"
