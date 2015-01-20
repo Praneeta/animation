@@ -21,7 +21,7 @@ app.templates.cards.index = {
       + "<div class=\"container\"></div>"
       + "<div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
 , card: "<div class=\"col-md-3 card-holder\">"
-      + "  <a href=\"/cards/<%= card %>\"> <img class=\"img-thumbnail\" class=\"img-responsive\" src=\"/assets/images/<%= card %>.jpg\" alt=\"happy new year\"></a>"
+      + "  <a href=\"#/cards/<%= card %>\"> <img class=\"img-thumbnail\" class=\"img-responsive\" src=\"/assets/images/<%= card %>.jpg\" alt=\"happy new year\"></a>"
       + "  <ul class=\"list-group share-buttons\">"
       + "    <li class=\"list-group-item\">"
       + "      <div class=\"fb-share-button\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" data-layout=\"icon\"></div>"
