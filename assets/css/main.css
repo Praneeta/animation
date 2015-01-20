@@ -1,8 +1,10 @@
-.card-image {
-  width: 100%;
-}
 .home-page {
   background-image: url("../images/bg.gif");
+}
+
+.card-image {
+  max-height: 600px;
+  max-width: 750px;
 }
 
 .home-page .contact {
@@ -155,22 +157,23 @@ h1 {
   background: rgba(48, 40, 40, 0.6);
   border-radius: 25px;
   padding: 16px;
-  width: 500px;
-  height: 400px;
-  position: absolute;
-  top: 300px;
-  left: 450px;
-  /* background-color: transparent; */
   font-size: 1.5em;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  z-index: 8;
+}
+
+.questions-container {
+  position: absolute;
+  bottom: 0;
+  width: 500px;
 }
 
 .message {
   font-size: 3em;
   font-family: fantasy;
-  z-index: 16;
+  position: absolute;
+  top: 0;
+  display: block;
 }
 
 .hidden-question, .hidden {
@@ -360,14 +363,6 @@ div.lights a{
   box-shadow: inset 0 0 0 5px #2b5274;
 }
 
-.message {
-  margin: 0;
-  position: relative;
-  cursor: pointer;
-  z-index: 12;
-  border: none;
-}
-
 .footer {
   position: absolute;
   font-size: 1em;
@@ -377,7 +372,6 @@ div.lights a{
   cursor: pointer;
   color: #fff;
 }
-
 
 .answer-options li {
   margin-bottom: 10px;

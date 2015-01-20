@@ -17,7 +17,6 @@ var app = app || {};
       this.model = app.data.cards.details
       this.slug = slug
       this.$el.empty()
-      console.log('slug', slug)
       this.$el.append(template({card: slug}))
       $('.page-body').attr('class', 'page-body ' + slug)
       this.render()
