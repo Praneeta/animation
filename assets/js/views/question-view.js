@@ -28,7 +28,7 @@ var app = app || {};
         , answer_template = _.template(this.templates.answerOption)
         , $answerOptions
 
-      this.current_question = this.collection[this.question]
+      this.current_question = this.collection[this.question][Math.floor(Math.random() * 10)]
       this.$el.empty()
       this.$el.append(question_template({question: this.current_question.question}))
 
@@ -46,7 +46,7 @@ var app = app || {};
         this.parentView.share()
       }
 
-      if (answeredCorrectly) this.parentView.reward()
+      if (answeredCorrectly) this.parentView.reward(this.question-1)
     },
     checkAnswer: function (event) {
       var selectedAnswer = $(event.target).text()
@@ -55,10 +55,9 @@ var app = app || {};
         , answer =  answeredCorrectly? 'correct-answer' : 'wrong-answer'
 
       $(event.target).append('<span class="' + answer + '"></span>')
-      //_.delay(this.processAnswer, 2000, answeredCorrectly);
       _(function() {
         this.processAnswer(answeredCorrectly);
-      }).chain().bind(this).delay(2000);
+      }).chain().bind(this).delay(500);
 
     }
   });

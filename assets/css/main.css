@@ -65,10 +65,11 @@
 
 /* entire container, keeps perspective */
 .flip-container {
-	perspective: 1000;
+	perspective: 100;
+  margin: 5px;
 }
 /* flip the pane when hovered */
-.flip-container:hover .flipper {
+.flip-container .reward {
 	transform: rotateY(180deg);
 }
 
@@ -79,7 +80,7 @@
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
+	transition: 0.5s;
 	transform-style: preserve-3d;
 
 	position: relative;
@@ -90,8 +91,7 @@
 	backface-visibility: hidden;
 
 	position: absolute;
-	top: 0;
-	left: 0;
+  border-style: dashed;
 }
 
 /* front pane, placed above back */
@@ -99,128 +99,66 @@
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
-  background-color: yellow;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 110px;
+  font-family: fantasy;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
-  background-color: red;
+  right: 5px;
 }
 
-.flip-container:hover .flipper{
+.flip-container .reward{
     -webkit-animation-name: rotate;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 3;
     -webkit-animation-timing-function: linear;
     -moz-animation-name: rotate;
-    -moz-animation-duration: 0.5s;
+    -moz-animation-duration: 1s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: linear;
 }
 @-webkit-keyframes rotate {
     from {-webkit-transform: rotateY(0deg);}
-    to {-webkit-transform: rotateY(180deg);}
+    to {-webkit-transform: rotateY(360deg);}
 }
 
 @-moz-keyframes rotate {
-    from {-moz-transform: rotateY(0deg);}
-    to {-moz-transform: rotateY(180deg);}
+    from  {-moz-transform: rotateY(0deg);}
+    to {-moz-transform: rotateY(360deg);}
 }
+
+/** indian republic day only **/
+
+.khiladi {
+  background-image: url('../images/khiladi.jpg')
+}
+
+.sachin {
+  background-image: url('../images/sachin.jpg')
+}
+
+.isro {
+  background-image: url('../images/isro.jpg')
+}
+
+.taj {
+  background-image: url('../images/taj.jpg')
+}
+
+.gandhi {
+  background-image: url('../images/gandhi.jpg')
+}
+
+/** indian republic day only end **/
 
 
 /**** old ****/
-
-.page-body {
-  background-repeat: no-repeat;
-  width: 1200px;
-  height: 700px;
-  margin: auto;
-  position: relative;
-}
-
-h1 {
-  margin: 0;
-  text-align: center;
-}
-
-.gift-box {
-  background-image: url('../images/santa_sleigh.png');
-  background-repeat: no-repeat;
-  width: 250px;
-  height: 230px;
-  position: absolute;
-  right: 100px;
-  top: 10px;
-  z-index: 1;
-}
-
-.gift {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  position: absolute;
-  top: 90px;
-  z-index: 9 !important;
-}
-
-.video-embed {
-  width: 422.4px;
-  height: 257.4px;
-  position: absolute;
-  top: 10px;
-  left: 450px;
-}
-
-.tree {
-  background-image: url('../images/christmas_tree.png');
-  background-repeat: no-repeat;
-  width: 455px;
-  height: 670px;
-  display: inline-block;
-  position: absolute;
-  left: 30px;
-  top: 40px;
-}
-
-.ornament-0 {
-  background-image: url('../images/ornament_1.png')
-}
-
-.ornament-1 {
-  background-image: url('../images/ornament_2.png');
-  height: 87px;
-}
-
-.ornament-star {
-  background-image: url('../images/star.png');
-  height: 70px;
-  width: 70px;
-}
-
-.ornament-star-new {
-  background-image: url('../images/star-new.png');
-  height: 70px;
-  width: 70px;
-}
-
-.ornament-box {
-  background-image: url('../images/small_gift.png');
-  height: 47px;
-  width: 70px;
-}
-
-.ornament-bear {
-  background-image: url('../images/bear.png');
-  height: 71px;
-  width: 70px;
-}
-
-.ornament-snitch {
-  background-image: url('../images/snitch.png');
-  height: 70px;
-  width: 149px;
-}
 
 .questions-container, .message {
   background: rgba(48, 40, 40, 0.6);
@@ -257,167 +195,6 @@ h1 {
   color: blue;
   z-index: 2;
 }
-
-/* ----Snow----- */
-
-.snow{
-	background: none;
-	font-family: Androgyne;
-	background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), url('http://www.wearewebstars.dk/codepen/img//s2.png'), url('http://www.wearewebstars.dk/codepen/img//s3.png');
-	height: 100%;
-	z-index:1;
-	-webkit-animation: snow 10s linear infinite;
-	-moz-animation: snow 10s linear infinite;
-	-ms-animation: snow 10s linear infinite;
-	animation: snow 10s linear infinite;
-  width: 1200px;
-  height: 700px;
-  margin: auto;
-  position: absolute;
-  top: 0px;
-}
-@keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
-}
-@-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-@-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
-}
-/* end snow */
-
-div.lights {
-  height: 20px;
-  font-size: 3em;
-  position: absolute;
-}
-
-div.lights:nth-child(1) {
-  top: 25px;
-  left: 183px;
-}
-
-div.lights:nth-child(2) {
-  top: 70px;
-  left: 150px;
-}
-
-
-div.lights:nth-child(3) {
-  top: 147px;
-  left: 127px;
-}
-
-div.lights:nth-child(4) {
-  top: 210px;
-  left: 107px;
-}
-
-div.lights:nth-child(5) {
-  top: 273px;
-  left: 61px;
-}
-
-div.lights:nth-child(6) {
-  top: 333px;
-  left: 41px;
-}
-
-div.lights:nth-child(7) {
-  top: 420px;
-  left: 28px;
-}
-
-div.lights:nth-child(8) {
-  top: 490px;
-  left: 40px;
-}
-
-
-div.lights:nth-child(even) a{
-  color:#FFDD1B;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
-}
-
-div.lights:nth-child(odd) a{
-  color:#FF1177;
-  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
-  animation: neon2 1.5s ease-in-out infinite alternate;
-}
-
-div.lights a{
-  text-decoration:none;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-/*glow for webkit*/
-@-webkit-keyframes neon2 {
-  from {
-    text-shadow: 0 0 10px #fff,
-               0 0 20px  #fff,
-               0 0 30px  #fff,
-               0 0 40px  #FF1177,
-               0 0 70px  #FF1177,
-               0 0 80px  #FF1177,
-               0 0 100px #FF1177,
-               0 0 150px #FF1177;
-    font-size: 1.45em;
-  }
-  to {
-    text-shadow: 0 0 5px #fff,
-               0 0 10px #fff,
-               0 0 15px #fff,
-               0 0 20px #FF1177,
-               0 0 35px #FF1177,
-               0 0 40px #FF1177,
-               0 0 50px #FF1177,
-               0 0 75px #FF1177;
-    font-size: 1.45em;
-  }
-}
-
-@-webkit-keyframes neon1 {
-  from {
-    text-shadow: 0 0 10px #fff,
-               0 0 20px  #fff,
-               0 0 30px  #fff,
-               0 0 40px  #FFDD1B,
-               0 0 70px  #FFDD1B,
-               0 0 80px  #FFDD1B,
-               0 0 100px #FFDD1B,
-               0 0 150px #FFDD1B;
-    font-size: 1.45em;
-  }
-  to {
-    text-shadow: 0 0 5px #fff,
-               0 0 10px #fff,
-               0 0 15px #fff,
-               0 0 20px #FFDD1B,
-               0 0 35px #FFDD1B,
-               0 0 40px #FFDD1B,
-               0 0 50px #FFDD1B,
-               0 0 75px #FFDD1B;
-    font-size: 1.45em;
-  }
-}
-
 
 .fb-share {
   background: url('../images/facebookShare.png') no-repeat;

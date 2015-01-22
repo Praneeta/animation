@@ -22,14 +22,10 @@ var app = app || {};
       this.render()
     },
     render: function (){
-      new app.QuestionView(this.category, this.slug, this.model.questions, this);
+      new app.QuestionView(this.category, this.slug, app.questions, this);
     },
-    reward: function () {
-      new app.RewardView(this.getRewardName(), this.model['gift-drop'])
-    },
-    getRewardName: function (){
-      var reward = app.data.cards.details.gift[this.rewardNum]
-      return reward
+    reward: function (question) {
+      $(this.$('.flipper')[question]).addClass('reward')
     },
     share: function (){
 
