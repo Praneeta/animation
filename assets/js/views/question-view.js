@@ -40,13 +40,12 @@ var app = app || {};
     },
     processAnswer: function(answeredCorrectly) {
       if(this.question < (this.collection.length -1) ) {
-        this.question++;
         this.showNextQuestion()
       } else {
         this.parentView.share()
       }
 
-      if (answeredCorrectly) this.parentView.reward(this.question-1)
+      if (answeredCorrectly) this.parentView.reward(this.question++)
     },
     checkAnswer: function (event) {
       var selectedAnswer = $(event.target).text()

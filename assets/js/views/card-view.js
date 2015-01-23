@@ -13,11 +13,14 @@ var app = app || {};
     category: undefined,
     slug: undefined,
     initialize: function (slug) {
+      var index = _.indexOf(app.data.cards, slug)
+        , next = ((index + 1) % app.data.cards.length)
+        , prev = (app.data.cards.length + (index - 1)) % app.data.cards.length
       var template = _.template(app.templates.cards.content)
       this.model = app.data.cards.details
       this.slug = slug
       this.$el.empty()
-      this.$el.append(template({card: slug}))
+      this.$el.append(template({card: slug, next: app.data.cards[next], prev: app.data.cards[prev]}))
       $('.page-body').attr('class', 'page-body ' + slug)
       this.render()
     },

@@ -1,5 +1,6 @@
 .home-page {
   background-image: url("../images/bg.gif");
+  background-repeat: no-repeat;
 }
 
 .home-page .contact {
@@ -57,11 +58,15 @@
   }
  }
 
+.badges {
+  position: absolute;
+  top: 0px;
+  right: 40px;
+}
 
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 100;
-  margin: 5px;
 }
 /* flip the pane when hovered */
 .flip-container .reward {
@@ -69,8 +74,8 @@
 }
 
 .flip-container, .front, .back {
-	width: 120px;
-	height: 120px;
+	width: 70px;
+	height: 70px;
 }
 
 /* flip speed goes here */
@@ -84,9 +89,7 @@
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
-  border-style: dashed;
 }
 
 /* front pane, placed above back */
@@ -96,10 +99,11 @@
 	transform: rotateY(0deg);
   vertical-align: middle;
   text-align: center;
-  line-height: 110px;
+  line-height: 60px;
   font-family: fantasy;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
+  border-style: dashed;
 }
 
 /* back, initially hidden pane */

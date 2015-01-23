@@ -12,7 +12,7 @@ app.data.meta = {
   icon: 'heart.jpg'
 }
 
-app.data.cards = ['flag', 'flag_painted', 'flight', 'heart', 'heroes', 'peace', 'simple', 'tree', 'vande_matarm', 'hands']
+app.data.cards = ['flight', 'heart', 'peace', 'simple', 'tree', 'hands', 'flag' ]
 
 var sports = [
   {
@@ -172,7 +172,7 @@ var geography = [
   }
 ]
 
-var history = [
+var past = [
   {
     "question":"Who among the following is known as Flying Sikh of India?",
     "answers":["Kapil Dev", "PT Usha", "Milkha Singh", "Joginder Singh"],
@@ -277,4 +277,4 @@ var bollywood = [
   }
 ]
 
-app.questions = [sports, science, geography, history, bollywood]
+app.questions = [sports, science, geography, past, bollywood]

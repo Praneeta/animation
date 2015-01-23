@@ -24,7 +24,7 @@ var app = app || {};
       var newRow
         , template = _.template(this.templates.card);
       this.collection.forEach(function(card, index){
-        if(index % 4 === 0) {
+        if(index % 3 === 0) {
           newRow = $('<div class="row"></div>')
           this.$('.container').append('<div class="empty-div"></div>').append(newRow)
         }
