@@ -20,9 +20,13 @@
   background-color: transparent;
 }
 
-
-.image-container {
-  position: relative;
+.footer {
+  font-size: 1em;
+  bottom: 0px;
+  margin-left: 20px;
+  z-index: 1;
+  text-align:center;
+  margin-top: 10px;
 }
 
 .mobile-share {
@@ -45,7 +49,7 @@
 }
 
 .empty-div {
-  height: 15px;
+  height: 50px;
 }
 
 .card-holder {
@@ -208,15 +212,6 @@
   box-shadow: inset 0 0 0 5px #2b5274;
 }
 
-.footer {
-  position: absolute;
-  font-size: 1em;
-  bottom: 0px;
-  margin-left: 20px;
-  z-index: 1;
-  cursor: pointer;
-  color: #fff;
-}
 
 .answer-options li {
   margin-bottom: 10px;

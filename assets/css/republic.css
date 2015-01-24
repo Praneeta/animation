@@ -1,0 +1,76 @@
+.card-holder * {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+.image-container {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+.image-container:hover .image-caption,
+.image-container:hover h2,
+.image-container:hover p.icon-links span {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.image-caption h2 {
+  display: inline-block;
+  float: left;
+  font-weight: 300;
+}
+
+.image-caption h2, .image-caption p {
+  margin: 0;
+}
+
+.image-caption h2 span {
+  font-weight: 800;
+}
+.image-container:hover h2 {
+  text-decoration: underline;
+ -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.image-container:hover p.share-links span {
+  float: right;
+  padding: 8px 10px;
+}
+
+.image-container:hover p.share-links span:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.image-container:hover p.share-links span:nth-child(1) {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.image-container:hover p.share-links span:first-child {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  padding: 2em;
+  background: rgba(36, 79, 79, 0.3);
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
