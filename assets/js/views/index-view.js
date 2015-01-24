@@ -11,7 +11,7 @@ var app = app || {};
     el: '.page-content',
     //Not the best place. We probably need a card view.
     events: {
-    'click .image-container': "image_clicked"
+    'click .fb-share': "triggerFbShare"
     },
     initialize: function () {
       this.$el.empty()
@@ -35,7 +35,7 @@ var app = app || {};
         newRow.append(template({card: card}));
       }.bind(this))
     },
-    trigger_fb_share: function(target) {
+    triggerFbShare: function(target) {
       FB.ui({
         method: 'share',
         href: target.parents('.card-holder').attr('data-href'),
@@ -43,21 +43,6 @@ var app = app || {};
         console.log("We got resp from FB")
         console.log(response)
       });
-
-    },
-    image_clicked: function(event) {
-      var target = $(event.target)
-      if (target.hasClass("fb-share")) {
-        console.log("fb-share")
-        this.trigger_fb_share(target) 
-      } else if (target.hasClass("pinterest-icon")) {
-        console.log("pinterest share---")
-      }
-      else {
-        console.log("go to selected card")
-        //app.Router.navigate("cards/"+target.parents('.card-holder').attr("data-slug"));
-      }
-
 
     }
   });

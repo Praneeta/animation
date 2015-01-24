@@ -57,7 +57,7 @@
 }
 
 @media (max-width: 480px) {
-  .col-md-3 {
+  .col-md-4 {
     margin: 8px auto;
   }
  }
@@ -244,8 +244,9 @@
   background: url('/assets/images/fb-share.png');
 }
 
-.pinterest-icon {
-  background: url('/assets/images/pinterest-icon.png');
+.pinterest-icon img{
+  width: 38px;
+  height: auto;
 }
 
 .fb-share, .pinterest-icon {
