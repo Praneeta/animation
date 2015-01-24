@@ -9,7 +9,7 @@ app.templates.meta = "<meta charset=\"UTF-8\">"
   + "<meta name=\"description\" content=\"<%= title %>\">"
   + "<meta property=\"og:title\" content=\"<%= title %>\" />"
   + "<meta property=\"og:description\" content=\"<%= description %>\" />"
-  + "<meta property=\"og:image\" content=\"/assets/images/<%= image %>\" />"
+  + "<meta property=\"og:image\" content=\"<%= image %>\"/>"
   + "<meta name=\"viewport\" content=\"width=device-width; initial-scale=1.0; maximum-scale=1.0;\"/>"
   + "<link rel=\"icon\" type=\"image/png\" href=\"assets/images/<%= icon %>\" />"
   + "<link rel=\"apple-touch-icon\" type=\"image/png\" href=\"assets/images/<%= icon %>\"/>"
@@ -18,7 +18,7 @@ app.templates.cards = {}
 
 app.templates.cards.index = {
   content: "<h1 class=\"h1\"><span style=\"color: #FF9933\">Happy </span><span style=\"color: #000080\">Republic </span><span style=\"color: #138808\">Day</span></h1>"
-      + "<h2 class=\"help-text\"> Click on your favorite card below to share with your friends on Facebook </h2>"
+      + "<h2 class=\"help-text\">Select your favorite card and wish your friends on Facebook </h2>"
       + "<div class=\"container\"></div>"
       + "<div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
 , card: "<div class=\"col-md-4 card-holder\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" data-slug=\"<%=card%>\">"
