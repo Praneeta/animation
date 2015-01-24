@@ -17,6 +17,7 @@
 .home-page .h1 {
   color: #fff;
   padding: 40px;
+  padding-bottom: 20px;
   text-align: center;
   font-family: fantasy;
   font-size: 3em;
@@ -64,9 +65,13 @@
 
 @media (max-width: 480px) {
   .col-md-4 {
-    margin: 8px auto;
+    margin: 20px auto auto;
   }
- }
+  .home-page .h1 {
+    padding: 0px 40px 0px;
+    text-align: right;
+   }
+}
 
 .badges {
   position: absolute;
@@ -276,6 +281,10 @@ and (max-device-width : 480px) {
     -o-transition: all 4s ease-in-out;
     transition: all 4s ease-in-out;
     opacity: 0;
+  }
+
+  .empty-div {
+    display: none;
   }
 
 }

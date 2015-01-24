@@ -26,14 +26,17 @@ var app = app || {};
     },
     render: function(){
       var newRow
-        , template = _.template(this.templates.card);
+        , template = _.template(this.templates.card)
+        , emptyDiv
       this.collection.forEach(function(card, index){
         if(index % 3 === 0) {
+          emptyDiv = $('<div class="empty-div"></div>')
           newRow = $('<div class="row"></div>')
-          this.$('.container').append('<div class="empty-div"></div>').append(newRow)
+          this.$('.container').append(newRow).append(emptyDiv)
         }
-        newRow.append(template({card: card}));
+        newRow.append(template({card: card}))
       }.bind(this))
+      emptyDiv.remove()
     },
     triggerFbShare: function(target) {
       FB.ui({
