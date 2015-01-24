@@ -18,6 +18,7 @@ app.templates.cards = {}
 
 app.templates.cards.index = {
   content: "<h1 class=\"h1\"><span style=\"color: #FF9933\">Happy </span><span style=\"color: #000080\">Republic </span><span style=\"color: #138808\">Day</span></h1>"
+      + "<h2> Click on your favourite card below to share with your friends on Facebook </h2>"
       + "<div class=\"container\"></div>"
       + "<div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
 , card: "<div class=\"col-md-4 card-holder\">"
@@ -28,8 +29,10 @@ app.templates.cards.index = {
       + "        <h2 class=\"play-quiz\">Play <span>Quiz</span></h2>"
       + "        <p class=\"share-links\">"
       + "          <span class=\"whats-app\"><a href=\"whatsapp://send\" data-text=\"Happy New Year\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" class=\"wa_btn wa_btn_s\"></a></span>"
-      + "          <span class=\"pin-it\"><a href=\"//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmakemyholidaycard.com%2F<%= card %>.html&media=https%3A%2F%2Fmakemyholidaycard.com%2Fassets%2Fimages%2F<%= card %>.jpg&description=Happy%20New%20Year\" data-pin-do=\"buttonBookmark\"  data-pin-shape=\"round\"><img src=\"//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_16.png\" /></a></span>"
-      + "          <span class=\"fb-share-button\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" data-layout=\"icon\"></span>"
+      //+ "          <span class=\"pin-it\"><a href=\"//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmakemyholidaycard.com%2F<%= card %>.html&media=https%3A%2F%2Fmakemyholidaycard.com%2Fassets%2Fimages%2F<%= card %>.jpg&description=Happy%20New%20Year\" data-pin-do=\"buttonBookmark\"  data-pin-shape=\"round\"><img src=\"//assets.pinterest.com/images/pidgets/pinit_fg_en_round_red_16.png\" /></a></span>"
+      //+ "          <span class=\"fb-share-button\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\" data-layout=\"icon\"></span>"
+      + "          <span class=\"pinterest-icon\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\"></span>"
+      + "          <span class=\"fb-share\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\"></span>"
       + "        </p>"
       +"       </div>"
       + "    </div>"

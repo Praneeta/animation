@@ -13,12 +13,6 @@ box-sizing: border-box;
   max-width: 100%;
 }
 
-.image-container:hover .image-caption,
-.image-container:hover h2,
-.image-container:hover p.icon-links span {
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
 
 .image-caption h2 {
   display: inline-block;
@@ -35,28 +29,28 @@ box-sizing: border-box;
 }
 .image-container:hover h2 {
   text-decoration: underline;
- -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s;
+ -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 
-.image-container:hover p.share-links span {
+.image-container p.share-links span {
   float: right;
   padding: 8px 10px;
 }
 
-.image-container:hover p.share-links span:nth-child(3) {
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
-
-.image-container:hover p.share-links span:nth-child(1) {
+.image-container:hover p.share-links span.fb-share {
   -webkit-transition-delay: 0.15s;
   transition-delay: 0.15s;
 }
 
-.image-container:hover p.share-links span:first-child {
+.image-container:hover p.share-links span.pinterest-icon {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
+}
+
+.image-container:hover p.share-links span.whats-app {
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 
 .image-caption {
@@ -73,4 +67,17 @@ box-sizing: border-box;
   transition: transform 0.35s;
   -webkit-transform: translate3d(0,100%,0);
   transform: translate3d(0,100%,0);
+}
+.image-caption h2, .image-caption p.share-links span {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,200%,0);
+  transform: translate3d(0,200%,0);
+}
+
+.image-container:hover .image-caption,
+.image-container:hover h2,
+.image-container:hover p.share-links span {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }

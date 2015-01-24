@@ -199,6 +199,7 @@
   z-index: 2;
 }
 
+/*
 .fb-share {
   background: url('../images/facebookShare.png') no-repeat;
   width: 240px;
@@ -211,6 +212,7 @@
 .fb-share:hover {
   box-shadow: inset 0 0 0 5px #2b5274;
 }
+*/
 
 
 .answer-options li {
@@ -234,11 +236,25 @@
   display: inline-block;
 }
 
-
 .fadeout {
   opacity: 1;
 }
 
+.fb-share {
+  background: url('/assets/images/fb-share.png');
+}
+
+.pinterest-icon {
+  background: url('/assets/images/pinterest-icon.png');
+}
+
+.fb-share, .pinterest-icon {
+  display: inline-block;
+  width:40px;
+  height:40px;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
