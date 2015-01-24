@@ -31,7 +31,64 @@ var app = app || {};
       $(this.$('.flipper')[question]).addClass('reward')
     },
     share: function (){
-
+      $('.front').hide()
+      var that = this
+      html2canvas($(".image-container"), {
+        onrendered: function(canvas) {
+          var imageData = canvas.toDataURL("image/png")
+            , webSite = "Made this using "
+            , fileName = "RepublicDayCard"
+          FB.getLoginStatus(function(response) {
+            webSite+= window.location.href;
+            if (response.status === "connected") {
+              that.postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", imageData, webSite);
+            } else {
+              FB.login(function(response)  {
+                that.postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", imageData, webSite);
+              }, {scope: "publish_actions"});
+           }
+         });
+        }
+      })
+    },
+    dataURItoBlob: function(dataURI) {
+      var byteString = atob(dataURI.split(',')[1])
+        , ab = new ArrayBuffer(byteString.length)
+        , ia = new Uint8Array(ab)
+      for (var i = 0; i < byteString.length; i++) {
+          ia[i] = byteString.charCodeAt(i)
+      }
+      return new Blob([ab], {
+        type: 'image/png'
+      })
+    },
+    postImageToFacebook: function(authToken, filename, mimeType, imageData, message) {
+      try {
+        var blob = this.dataURItoBlob(imageData);
+      } catch (e) {
+        alert("Could not process your image. Please try again");
+        return false;
+      }
+      var fd = new FormData();
+      fd.append("access_token", authToken);
+      fd.append("source", blob);
+      fd.append("message", "Made this using http://www.makemyholidaycard.com");
+      $.ajax({
+        url: "https://graph.facebook.com/me/photos?access_token=" + authToken,
+        type: "POST",
+        data: fd,
+        processData: false,
+        contentType: false,
+        success: function (data) {
+          console.log("success " + data);
+        },
+        error: function (shr, status, data) {
+          console.log("error " + data + " Status " + shr.status);
+        },
+        complete: function () {
+          console.log("Posted to facebook");
+        }
+      });
     }
   });
 })(jQuery);

@@ -42,6 +42,7 @@ var app = app || {};
       if(this.question < (this.collection.length -1) ) {
         this.showNextQuestion()
       } else {
+        this.$el.hide()
         this.parentView.share()
       }
 
