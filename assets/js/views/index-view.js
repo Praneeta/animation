@@ -9,6 +9,10 @@ var app = app || {};
   // Our overall **AppView** is the top-level piece of UI.
   app.IndexView = Backbone.View.extend({
     el: '.page-content',
+    //Not the best place. We probably need a card view.
+    events: {
+    'click .image-container': "image_clicked"
+    },
     initialize: function () {
       this.$el.empty()
       this.templates = app.templates.cards.index
@@ -29,7 +33,33 @@ var app = app || {};
           this.$('.container').append('<div class="empty-div"></div>').append(newRow)
         }
         newRow.append(template({card: card}));
-      }.bind(this));
+      }.bind(this))
+    },
+    trigger_fb_share: function(target) {
+                        debugger;
+      FB.ui({
+        method: 'share',
+        href: target.parents('.card-holder').attr('data-href'),
+      }, function(response){
+        console.log("We got resp from FB")
+        console.log(response)
+      });
+
+    },
+    image_clicked: function(event) {
+      var target = $(event.target)
+      if (target.hasClass("fb-share")) {
+        console.log("fb-share")
+        this.trigger_fb_share(target) 
+      } else if (target.hasClass("pinterest-icon")) {
+        console.log("pinterest share---")
+      }
+      else {
+        console.log("go to selected card")
+        //app.Router.navigate("cards/"+target.parents('.card-holder').attr("data-slug"));
+      }
+
+
     }
   });
 })(jQuery);
