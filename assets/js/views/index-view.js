@@ -38,10 +38,10 @@ var app = app || {};
       }.bind(this))
       emptyDiv.remove()
     },
-    triggerFbShare: function(target) {
+    triggerFbShare: function(event) {
       FB.ui({
         method: 'share',
-        href: target.parents('.card-holder').attr('data-href'),
+        href: $(event.target).parents('.card-holder').attr('data-href'),
       }, function(response){
         console.log("We got resp from FB")
         console.log(response)

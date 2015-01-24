@@ -255,7 +255,7 @@
   background: url('/assets/images/fb-share.png');
 }
 
-.pinterest-icon img{
+.pinterest-icon img, .whats-app img{
   width: 38px;
   height: auto;
 }
