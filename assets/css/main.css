@@ -8,6 +8,10 @@
   margin-top: 20px;
 }
 
+.help-text {
+  text-align: center;
+}
+
 .home-page .h1 {
   color: #fff;
   padding: 40px;
