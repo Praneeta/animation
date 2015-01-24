@@ -36,7 +36,6 @@ var app = app || {};
       }.bind(this))
     },
     trigger_fb_share: function(target) {
-                        debugger;
       FB.ui({
         method: 'share',
         href: target.parents('.card-holder').attr('data-href'),
