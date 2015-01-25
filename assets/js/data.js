@@ -230,12 +230,12 @@ var past = [
 
 var bollywood = [
   {
-    "question":"'Kabhi Khushi Kabhie Gham' released in 2001 was a big box office hit and starred many top actors of Bollywood. Who among the following did NOT act in the movie?",
+    "question":"Who among the following did NOT act in Kabhi Khushi Kabhie Gham?",
     "answers":["Shah Rukh Khan", "Salman Khan", "Hrithik Roshan", "Amitabh Bachchan"],
     "correct": 1
   },
   {
-    "question":"The 1980s were known for action movies, but in 1988, a film was released that brought back romance in Bollywood. The film starred Aamir Khan and Juhi Chawla. Do you know the name of the film?",
+    "question":"In 1988 which film starred Aamir Khan and Juhi Chawla that brought back romance to Bollywood?",
     "answers":["Maine Pyar Kiya", "Aashiqi", "Qayamat Se Qayamat Tak", "Dil"],
     "correct": 2
   },
