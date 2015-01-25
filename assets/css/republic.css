@@ -103,5 +103,7 @@ and (max-device-width : 480px) {
     font-size: 1.4em;
     margin-top: 8px;
   }
-
+  .image-container p.share-links span {
+    padding: 0;
+  }
 }

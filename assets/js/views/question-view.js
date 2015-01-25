@@ -34,6 +34,8 @@ var app = app || {};
 
       $answerOptions = this.$('.answer-options ul')
 
+      $('.image-container').css('min-height', $('.image-container img').height() + 'px !important')
+
       this.current_question.answers.forEach(function(option){
         $answerOptions.append(answer_template({option: option}));
       }.bind(this));
@@ -46,13 +48,18 @@ var app = app || {};
         this.parentView.share()
       }
 
-      if (answeredCorrectly) this.parentView.reward(this.question++)
+      if (answeredCorrectly) {
+        $($('.front')[this.question]).hide()
+        this.parentView.reward(this.question++)
+      } else {
+        $($('.end')[this.question++]).hide()
+      }
     },
     checkAnswer: function (event) {
       var selectedAnswer = $(event.target).text()
         , correctAnswer = this.current_question.answers[this.current_question.correct]
         , answeredCorrectly = selectedAnswer === correctAnswer
-        , answer =  answeredCorrectly? 'correct-answer' : 'wrong-answer'
+        , answer = answeredCorrectly? 'correct-answer' : 'wrong-answer'
 
       $(event.target).append('<span class="' + answer + '"></span>')
       _(function() {

@@ -9,6 +9,9 @@ var app = app || {};
   // Our overall **AppView** is the top-level piece of UI.
   app.CardView = Backbone.View.extend({
     el: '.page-content',
+    events: {
+      'click .fb-share': 'shareOnFacebook'
+    },
     rewardNum: 0,
     category: undefined,
     slug: undefined,
@@ -33,8 +36,10 @@ var app = app || {};
     reward: function (question) {
       $(this.$('.flipper')[question]).addClass('reward')
     },
-    share: function (){
-      $('.front').hide()
+    share: function () {
+      this.$('.fb-share').show()
+    },
+    shareOnFacebook: function () {
       var that = this
       html2canvas($(".image-container"), {
         onrendered: function(canvas) {
