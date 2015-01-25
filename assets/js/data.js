@@ -125,53 +125,53 @@ var science = [
 
 var geography = [
   {
-    "question":"Who among the following is known as Flying Sikh of India?",
-    "answers":["Kapil Dev", "PT Usha", "Milkha Singh", "Joginder Singh"],
+    "question":"The southernmost point of peninsular India, that is, Kanyakumari, is",
+    "answers":["north of Tropic of Cancer", "south of the Equator", "south of the Capricorn", "north of the Equator"],
+    "correct": 3
+  },
+  {
+    "question":"The India's highest annual rainfall is reported at",
+    "answers":["Namchi, Sikkim", "Churu, Rajasthan", "Mawsynram, Meghalaya", "Chamba, Himachal Pradesh"],
     "correct": 2
   },
   {
-    "question":"In which stadium did Sachin Tendulkar score his 100th century?",
-    "answers":["Eden Garden", "Shere Bangla Stadium", "Firoz Shah Kotla Ground", "Vankhede Stadium"],
-    "correct": 1
-  },
-  {
-    "question":"The 'Dronacharya Award' is given to...?",
-    "answers":["Sportsmen", "Coaches", "Umpires", "Sports Editors "],
-    "correct": 1
-  },
-  {
-    "question":"Who among the following is known as Flying Sikh of India?",
-    "answers":["Kapil Dev", "PT Usha", "Milkha Singh", "Joginder Singh"],
+    "question":"The state having a largest area of forest cover in India is",
+    "answers":["Arunachal Pradesh", "Haryana", "Madhya Pradesh", "Assam"],
     "correct": 2
   },
   {
-    "question":"In which stadium did Sachin Tendulkar score his 100th century?",
-    "answers":["Eden Garden", "Shere Bangla Stadium", "Firoz Shah Kotla Ground", "Vankhede Stadium"],
-    "correct": 1
+    "question":"The only state in India that produces saffron is",
+    "answers":["Assam", "Himachal Pradesh", "Jammu and Kashmir", "Meghalaya"],
+    "correct": 2
   },
   {
-    "question":"The 'Dronacharya Award' is given to...?",
-    "answers":["Sportsmen", "Coaches", "Umpires", "Sports Editors "],
-    "correct": 1
+    "question":"Which of the following food grain crops occupies the largest part of the cropped area in India?",
+    "answers":["Barley and maize", "Jowar and bajra", "Rice", "Wheat"],
+    "correct": 2
+  },
+  {
+    "question":"Which is the largest state in India",
+    "answers":["Maharashtra", "Punjab", "Karnataka", "Madhya Pradesh"],
+    "correct": 3
   },{
-    "question":"Who among the following is known as Flying Sikh of India?",
-    "answers":["Kapil Dev", "PT Usha", "Milkha Singh", "Joginder Singh"],
+    "question":"How many states does India have?",
+    "answers":["26", "27", "28", "29"],
+    "correct": 3
+  },
+  {
+    "question":"How many union territories does India have?",
+    "answers":["5", "6", "7", "8"],
     "correct": 2
   },
   {
-    "question":"In which stadium did Sachin Tendulkar score his 100th century?",
-    "answers":["Eden Garden", "Shere Bangla Stadium", "Firoz Shah Kotla Ground", "Vankhede Stadium"],
-    "correct": 1
+    "question":"Which is the longest river in India?",
+    "answers":["Ganga", "Yamuna", "Bramhaputra", "Godavari"],
+    "correct": 0
   },
   {
-    "question":"The 'Dronacharya Award' is given to...?",
-    "answers":["Sportsmen", "Coaches", "Umpires", "Sports Editors "],
-    "correct": 1
-  },
-  {
-    "question":"The 'Dronacharya Award' is given to...?",
-    "answers":["Sportsmen", "Coaches", "Umpires", "Sports Editors "],
-    "correct": 1
+    "question":"Which state is the largest producer of tea in india?",
+    "answers":["Assam", "West Bengal", "Tamil Nadu", "Kerala"],
+    "correct": 3
   }
 ]
 
@@ -230,53 +230,53 @@ var past = [
 
 var bollywood = [
   {
-    "question":"Name the Rajput princess whom Akbar married?",
-    "answers":["Jodha Bhai", "Noor Jehan", "Mumtaz Mahal", "Jija Bai"],
+    "question":"'Kabhi Khushi Kabhie Gham' released in 2001 was a big box office hit and starred many top actors of Bollywood. Who among the following did NOT act in the movie?",
+    "answers":["Shah Rukh Khan", "Salman Khan", "Hrithik Roshan", "Amitabh Bachchan"],
+    "correct": 1
+  },
+  {
+    "question":"The 1980s were known for action movies, but in 1988, a film was released that brought back romance in Bollywood. The film starred Aamir Khan and Juhi Chawla. Do you know the name of the film?",
+    "answers":["Maine Pyar Kiya", "Aashiqi", "Qayamat Se Qayamat Tak", "Dil"],
+    "correct": 2
+  },
+  {
+    "question":"In which of the following films did Shah Rukh Khan play the role of a villain?",
+    "answers":["Darr", "Kuch Kuch Hota Hai", "Dilwale Dulhaniya Le Jayenge", "Pardes"],
     "correct": 0
   },
   {
-    "question":"In which stadium did Sachin Tendulkar score his 100th century?",
-    "answers":["Eden Garden", "Shere Bangla Stadium", "Firoz Shah Kotla Ground", "Vankhede Stadium"],
+    "question":"Which actor/actress does not match the role he/she played in Sholay",
+    "answers":["Asrani = Jailer", "Hema Malini = Radha", "Amjad Khan = Gabbar Singh", "Sanjeev Kumar = Thakur"],
     "correct": 1
   },
   {
-    "question":"The 'Dronacharya Award' is given to...?",
-    "answers":["Sportsmen", "Coaches", "Umpires", "Sports Editors "],
-    "correct": 1
+    "question":"Who played the role of the Don in the original movie Don?",
+    "answers":["Shah Rukh Khan", "Hritik Roshan", "Amir Khan", "Amitabh Bacchan"],
+    "correct": 3
   },
   {
-    "question":"Who among the following is known as Flying Sikh of India?",
-    "answers":["Kapil Dev", "PT Usha", "Milkha Singh", "Joginder Singh"],
+    "question":"Who was the heroine of this movie Aradhana staring with Rajesh Khanna?",
+    "answers":["Tina Munim", "Hema Malini", "Sharmila Tagore", "Rekha"],
     "correct": 2
-  },
-  {
-    "question":"In which stadium did Sachin Tendulkar score his 100th century?",
-    "answers":["Eden Garden", "Shere Bangla Stadium", "Firoz Shah Kotla Ground", "Vankhede Stadium"],
-    "correct": 1
-  },
-  {
-    "question":"The 'Dronacharya Award' is given to...?",
-    "answers":["Sportsmen", "Coaches", "Umpires", "Sports Editors "],
-    "correct": 1
   },{
-    "question":"Who among the following is known as Flying Sikh of India?",
-    "answers":["Kapil Dev", "PT Usha", "Milkha Singh", "Joginder Singh"],
+    "question":"Who portrayed the role of Emperor Akbar in the movie Mughal-E-Azam?",
+    "answers":["Dilip Kumar", "Prithviraj Kapoor", "Manoj Kumar", "Sohrab Modi"],
+    "correct": 1
+  },
+  {
+    "question":"Who among the following did NOT star in the movie Mother India?",
+    "answers":["Sunil Dutt", "Dilip Kumar", "Nargis", "Rajendra Kumar"],
+    "correct": 1
+  },
+  {
+    "question":"Who starred opposite Raj Kapoor in the movie Barsaat?",
+    "answers":["Madhubala", "Nimmi", "Nargis", "Suchitra Sen"],
     "correct": 2
   },
   {
-    "question":"In which stadium did Sachin Tendulkar score his 100th century?",
-    "answers":["Eden Garden", "Shere Bangla Stadium", "Firoz Shah Kotla Ground", "Vankhede Stadium"],
-    "correct": 1
-  },
-  {
-    "question":"The 'Dronacharya Award' is given to...?",
-    "answers":["Sportsmen", "Coaches", "Umpires", "Sports Editors "],
-    "correct": 1
-  },
-  {
-    "question":"The 'Dronacharya Award' is given to...?",
-    "answers":["Sportsmen", "Coaches", "Umpires", "Sports Editors "],
-    "correct": 1
+    "question":"What is Gabbar's full name in Sholay?",
+    "answers":["Gabbar Hari Singh", "Gabbar Hari Seth", "Gabbar Mohan Singh", "Gabbar Mohan Seth"],
+    "correct": 0
   }
 ]
 
