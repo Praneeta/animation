@@ -284,6 +284,13 @@
 
 .card .fb-share {
   display: none;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  background-image: url('/assets/images/facebookShare.png');
+  width: 250px;
+  height: 50px;
+  background-size: contain;
 }
 
 @media only screen
@@ -309,10 +316,15 @@ and (max-device-width : 480px) {
   }
 
   .card .image-container {
-    min-height: 600px !important;
+    min-height: 600px;
   }
 
   .empty-div {
     display: none;
+  }
+
+  .card .fb-share {
+    top: 30%;
+    left: 15%;
   }
 }

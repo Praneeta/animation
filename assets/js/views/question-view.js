@@ -34,8 +34,6 @@ var app = app || {};
 
       $answerOptions = this.$('.answer-options ul')
 
-      $('.image-container').css('min-height', $('.image-container img').height() + 'px !important')
-
       this.current_question.answers.forEach(function(option){
         $answerOptions.append(answer_template({option: option}));
       }.bind(this));
@@ -45,6 +43,7 @@ var app = app || {};
         this.showNextQuestion()
       } else {
         this.$el.hide()
+        $('.image-container').css('min-height', $('.image-container img').height())
         this.parentView.share()
       }
 
@@ -52,7 +51,7 @@ var app = app || {};
         $($('.front')[this.question]).hide()
         this.parentView.reward(this.question++)
       } else {
-        $($('.end')[this.question++]).hide()
+        $($('.back')[this.question++]).hide()
       }
     },
     checkAnswer: function (event) {
