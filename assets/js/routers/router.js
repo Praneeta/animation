@@ -7,20 +7,19 @@ var app = app || {};
 	// ----------
 	var Router = Backbone.Router.extend({
 		routes: {
+			':slug': 'showCard',
       'index': 'index',
-			'cards/:slug': 'showCard',
       '': 'index'
 		}
 	});
 
   app.Router = new Router();
   app.Router.on("route:showCard", function(slug) {
+		slug = slug.replace('.html', '')
     new app.CardView(slug);
-    app.Router.navigate("cards/"+slug);
   });
   app.Router.on("route:index", function() {
     new app.IndexView();
-    app.Router.navigate("");
   });
   //Backbone.history.start({pushState: true});
   Backbone.history.start();

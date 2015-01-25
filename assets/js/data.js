@@ -14,7 +14,7 @@ app.data.meta = {
   icon: 'heart.jpg'
 }
 
-app.data.cards = ['flight', 'heart', 'peace', 'simple', 'tree', 'hands', 'flag', 'flag_painted', 'vande_mataram' ]
+app.data.cards = ['planes', 'heart', 'peace', 'simple', 'tree', 'hands', 'flag', 'flag_painted', 'vande_mataram' ]
 
 var sports = [
   {
