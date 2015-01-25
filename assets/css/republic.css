@@ -62,7 +62,7 @@ box-sizing: border-box;
   bottom: 0;
   left: 0;
   width: 100%;
-  font-size: 1.2em;
+  font-size: 0.8em;
   text-transform: uppercase;
   padding: 2em 1em;
   background: rgba(36, 79, 79, 0.3);
@@ -100,7 +100,7 @@ and (max-device-width : 480px) {
     padding: 2em 0;
   }
   .image-caption h2 {
-    font-size: 1.4em;
+    font-size: 1.7em;
     margin-top: 8px;
   }
   .image-container p.share-links span {
