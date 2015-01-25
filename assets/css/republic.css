@@ -97,7 +97,7 @@ and (max-device-width : 480px) {
     transform: translate3d(0,0,0);
   }
   .image-caption {
-    padding: 2em 1em;
+    padding: 2em 0;
   }
   .image-caption h2 {
     font-size: 1.4em;
@@ -105,5 +105,6 @@ and (max-device-width : 480px) {
   }
   .image-container p.share-links span {
     padding: 0;
+    margin-left: 16px;
   }
 }
