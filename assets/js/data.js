@@ -6,9 +6,9 @@ app.data.simple = false
 
 app.data.meta = {
   ogurl: '',
-  title: 'Happy Republic Day',
+  title: 'Happy Republic Day | makemyholidaycard.com',
   keywords: 'cards, free, India, republic, quiz, 26, Jan, 1950, holiday, vande mataram, jana gana mana, patriotic, mahatma gandhi, baba ambedkar, constitution, dry day, bharat, peace, freedom, history',
-  description: 'Make your republic day card, play a quiz, share with your friends',
+  description: 'How well do you know India? Show off your knowledge by winning a stamp for every correct answer. Then `post` your Republic day card to share it with friends.',
   imageType: 'gif',
   image: 'india',
   icon: 'heart.jpg'
