@@ -21,6 +21,5 @@ var app = app || {};
   app.Router.on("route:index", function() {
     new app.IndexView();
   });
-  //Backbone.history.start({pushState: true});
-  Backbone.history.start();
+  Backbone.history.start({pushState: true});
 })();
