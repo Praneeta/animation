@@ -5,10 +5,12 @@ app.data = {}
 app.data.simple = false
 
 app.data.meta = {
+  ogurl: '',
   title: 'Happy Republic Day',
   keywords: 'cards, free, India, republic, quiz, 26, Jan, 1950, holiday, vande mataram, jana gana mana, patriotic, mahatma gandhi, baba ambedkar, constitution, dry day, bharat, peace, freedom, history',
   description: 'Make your republic day card, play a quiz, share with your friends',
-  image: 'https://giphy.com/gifs/3xz2BsASCObDzHEeHe',
+  imageType: 'gif',
+  image: 'india',
   icon: 'heart.jpg'
 }
 

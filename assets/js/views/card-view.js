@@ -21,6 +21,7 @@ var app = app || {};
       this.model = app.data.cards.details
       this.slug = slug
       this.$el.empty()
+      _.extend(app.data.meta, {'ogurl':'/#/cards/'+this.slug, 'image':this.slug, 'imageType':'jpg'});
       $('head').html(headTemplate(app.data.meta))
       this.$el.append(template({card: slug, next: app.data.cards[next], prev: app.data.cards[prev]}))
       $('.page-body').attr('class', 'page-body ' + slug)
