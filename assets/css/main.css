@@ -180,8 +180,9 @@
 
 .questions-container {
   position: absolute;
-  top: 300px;
-  width: 500px;
+  top: 50%;
+  margin-left: 8%;
+  width: 80%;
 }
 
 .message {
@@ -266,16 +267,12 @@
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
-  .decorate .questions-container {
-    display: none;
-  }
-  .decorate .fadeout {
-    -webkit-transition: all 4s ease-in-out;
-    -moz-transition: all 4s ease-in-out;
-    -ms-transition: all 4s ease-in-out;
-    -o-transition: all 4s ease-in-out;
-    transition: all 4s ease-in-out;
-    opacity: 0;
+  .flip-container, .front, .back {
+    width: 35px;
+    height: 35px;
   }
 
+  .image-container {
+    min-height: 600px !important;
+  }
 }
