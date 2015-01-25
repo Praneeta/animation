@@ -282,15 +282,37 @@
   background-repeat: no-repeat;
 }
 
-.card .fb-share {
+.card .post-quiz {
   display: none;
   position: absolute;
-  top: 50%;
-  left: 20%;
+  top: 40%;
+  left: 10%;
+  width: 40%;
+  background-color: white;
+  height: 30%;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 10px;
+  font-family: fantasy;
+  font-size: 1.7em;
+  color: white;
+  background-color: rgba(48, 40, 40, 0.6)
+}
+.card .fb-share {
   background-image: url('/assets/images/facebookShare.png');
   width: 250px;
   height: 50px;
   background-size: contain;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.card .post-share, .card .during-share {
+  display: none;
+}
+
+.card .post-quiz a {
+  color: white;
 }
 
 @media only screen
@@ -326,5 +348,11 @@ and (max-device-width : 480px) {
   .card .fb-share {
     top: 30%;
     left: 15%;
+  }
+
+  .card .post-quiz {
+    top: 10%;
+    left: 10%;
+    width: 80%;
   }
 }

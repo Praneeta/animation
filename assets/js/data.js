@@ -198,8 +198,8 @@ var past = [
   },
   {
     "question":"Who said \"Aadhi lagin Kondanyache, mag lagin Raibache\", which means\"First the marriage of Kondana(Fort) and then the marriage of Raiba(his son)\"",
-    "answers":["Chatrapati Shivaji Maharaj", "Chatrapati Sambhaji Maharaj", "Tanjai Malusare", "None of the above"],
-    "correct": 1
+    "answers":["Chatrapati Shivaji Maharaj", "Chatrapati Sambhaji Maharaj", "Tanajai Malusare", "None of the above"],
+    "correct": 2
   },
   {
     "question":"Who was the founder of the Maratha Empire (Swarajya)",

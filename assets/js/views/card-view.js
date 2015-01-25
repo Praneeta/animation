@@ -37,9 +37,11 @@ var app = app || {};
       $(this.$('.flipper')[question]).addClass('reward')
     },
     share: function () {
-      this.$('.fb-share').show()
+      this.$('.post-quiz').show()
     },
     shareOnFacebook: function () {
+      $('.pre-share').hide()
+      $('.during-share').show()
       var that = this
       html2canvas($(".image-container"), {
         onrendered: function(canvas) {
@@ -80,7 +82,8 @@ var app = app || {};
       var fd = new FormData();
       fd.append("access_token", authToken);
       fd.append("source", blob);
-      fd.append("message", "Made this using http://www.makemyholidaycard.com");
+      fd.append("message", "Happy Republic Day. Test your knowledge about India on http://www.makemyholidaycard.com and make your own republic day card.");
+
       $.ajax({
         url: "https://graph.facebook.com/me/photos?access_token=" + authToken,
         type: "POST",
@@ -88,13 +91,13 @@ var app = app || {};
         processData: false,
         contentType: false,
         success: function (data) {
-          console.log("success " + data);
         },
         error: function (shr, status, data) {
-          console.log("error " + data + " Status " + shr.status);
+          $('.post-share .status').text('There was an error while sharing to Facebook.')
         },
         complete: function () {
-          console.log("Posted to facebook");
+          $('.during-share').hide()
+          $('.post-share').show()
         }
       });
     }
