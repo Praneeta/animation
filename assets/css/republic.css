@@ -3,7 +3,9 @@
 box-sizing: border-box;
 }
 
-
+.badges.row .flip-container {
+  padding-left: 0px;
+}
 .image-container {
   overflow: hidden;
   position: relative;
