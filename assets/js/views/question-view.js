@@ -39,19 +39,18 @@ var app = app || {};
       }.bind(this));
     },
     processAnswer: function(answeredCorrectly) {
-      if(this.question < (this.collection.length -1) ) {
-        this.showNextQuestion()
-      } else {
-        this.$el.hide()
-        $('.image-container').css('min-height', $('.image-container img').height())
-        this.parentView.share()
-      }
-
       if (answeredCorrectly) {
         $($('.front')[this.question]).hide()
         this.parentView.reward(this.question++)
       } else {
         $($('.back')[this.question++]).hide()
+      }
+      if(this.question < (this.collection.length) ) {
+        this.showNextQuestion()
+      } else {
+        this.$el.hide()
+        $('.image-container').css('min-height', $('.image-container img').height())
+        this.parentView.share()
       }
     },
     checkAnswer: function (event) {
