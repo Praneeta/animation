@@ -280,7 +280,7 @@ and (max-device-width : 480px) {
     height: 35px;
   }
 
-  .image-container {
+  .card .image-container {
     min-height: 600px !important;
   }
 

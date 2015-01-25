@@ -24,7 +24,7 @@ var app = app || {};
       _.extend(app.data.meta, {'ogurl':'/#/cards/'+this.slug, 'image':this.slug, 'imageType':'jpg'});
       $('head').html(headTemplate(app.data.meta))
       this.$el.append(template({card: slug, next: app.data.cards[next], prev: app.data.cards[prev]}))
-      $('.page-body').attr('class', 'page-body ' + slug)
+      $('.page-body').attr('class', 'page-body card ' + slug)
       this.render()
     },
     render: function (){
