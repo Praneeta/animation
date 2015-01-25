@@ -254,22 +254,33 @@
   opacity: 1;
 }
 
-.fb-share {
-  background: url('/assets/images/fb-share.png');
-}
-
 .pinterest-icon img, .whats-app img{
   width: 38px;
   height: auto;
 }
 
-.fb-share, .pinterest-icon {
+/*
+.whats-app {
+  display: none;
+}
+  */
+
+.fb-share {
+  background: url('/assets/images/fb-share.png');
+}
+
+.whats-app {
+  background: url('/assets/images/whats-app.png');
+}
+
+.fb-share, .pinterest-icon, .whats-app {
   display: inline-block;
   width:40px;
   height:40px;
   background-size: 40px 40px;
   background-repeat: no-repeat;
 }
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
@@ -277,6 +288,11 @@ and (max-device-width : 480px) {
   .decorate .questions-container {
     display: none;
   }
+
+  .whats-app {
+    display: block;
+  }
+
   .decorate .fadeout {
     -webkit-transition: all 4s ease-in-out;
     -moz-transition: all 4s ease-in-out;
