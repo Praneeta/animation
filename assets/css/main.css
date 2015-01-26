@@ -88,6 +88,7 @@
 }
 /* flip the pane when hovered */
 .flip-container .reward {
+  -webkit-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
 
@@ -98,14 +99,16 @@
 
 /* flip speed goes here */
 .flipper {
+  -webkit-transition: 0.5s;
 	transition: 0.5s;
+  -webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-
 	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
+  -webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	position: absolute;
 }
@@ -114,6 +117,9 @@
 .front {
 	z-index: 2;
 	/* for firefox 31 */
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
 	transform: rotateY(0deg);
   vertical-align: middle;
   text-align: center;
@@ -126,6 +132,9 @@
 
 /* back, initially hidden pane */
 .back {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
 	transform: rotateY(180deg);
   right: 5px;
 }
@@ -137,7 +146,7 @@
     -webkit-animation-timing-function: linear;
     -moz-animation-name: rotate;
     -moz-animation-duration: 1s;
-    -moz-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: 3;
     -moz-animation-timing-function: linear;
 }
 @-webkit-keyframes rotate {
