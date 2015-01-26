@@ -135,7 +135,7 @@
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
   right: 5px;
 }
 
@@ -359,5 +359,8 @@ and (max-device-width : 480px) {
     top: 10%;
     left: 10%;
     width: 80%;
+  }
+  .questions-container {
+    top: auto;
   }
 }
