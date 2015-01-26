@@ -33,7 +33,7 @@ app.templates.cards.index = {
       + "          <h2 class=\"play-quiz\">Play <span>Quiz</span></h2>"
       + "        </a>"
       + "        <p class=\"share-links\">"
-      + "          <span class=\"whats-app visible-xs\"><a href=\"whatsapp://send\" data-text=\"Happy Republic Day. Take this quiz to test your knowledge about your country.\" data-href=\"https://www.makemyholidaycard.com/<%= card %>.html\"  style=\"display:none\">whatsapp</a></span>"
+      + "          <span class=\"whats-app visible-xs\"><a href=\"whatsapp://send\" data-text=\"Happy Republic Day. Take this quiz to test your knowledge about your country.\" data-href=\"http%3A%2F%2Fmakemyholidaycard.com%2F<%= card %>.html\" class=\"wa_btn wa_btn_l\" style=\"display:none\">Share</a></span>"
       + "          <span class=\"pinterest-icon\">"
       + "            <a href=\"//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fmakemyholidaycard.com%2F<%= card %>.html%26media%3Dhttps%3A%2F%2Fmakemyholidaycard.com%2Fassets%2Fimages%2F<%= card %>.jpg%26description%3DHappy%20Republic%20Day\" data-pin-do=\"buttonBookmark\"  data-pin-shape=\"round\">"
       + "              <img src=\"/assets/images/pinterest-icon.png\" />"
