@@ -36,7 +36,8 @@ var app = app || {};
     reward: function (question) {
       $(this.$('.flipper')[question]).addClass('reward')
     },
-    share: function () {
+    share: function (correct_answers) {
+      $('.score').html('You got '+ correct_answers + ' of 5 correct.')
       this.$('.post-quiz').show()
     },
     shareOnFacebook: function () {

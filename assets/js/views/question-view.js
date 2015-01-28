@@ -13,6 +13,7 @@ var app = app || {};
       'click .answer': 'checkAnswer'
     },
     question: 0,
+    correct_answers: 0,
     current_question : undefined,
     templates: app.templates.cards,
     initialize: function (category, slug, collection, parent) {
@@ -40,6 +41,7 @@ var app = app || {};
     },
     processAnswer: function(answeredCorrectly) {
       if (answeredCorrectly) {
+        this.correct_answers++
         $($('.front')[this.question]).hide()
         this.parentView.reward(this.question++)
       } else {
@@ -50,7 +52,7 @@ var app = app || {};
       } else {
         this.$el.hide()
         $('.image-container').css('min-height', $('.image-container img').height())
-        this.parentView.share()
+        this.parentView.share(this.correct_answers)
       }
     },
     checkAnswer: function (event) {
