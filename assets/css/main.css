@@ -1,5 +1,9 @@
+.img-thumbnail {
+  border-color: #CC0000;
+}
+
 .home-page {
-  background-image: url("../images/bg.gif");
+  background-image: url("../images/hearts-dancing.gif");
   background-repeat: no-repeat;
 }
 
