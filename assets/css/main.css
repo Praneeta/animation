@@ -1,5 +1,6 @@
 .img-thumbnail {
-  border-color: #CC0000;
+  display: block;
+  border: 2px solid #CC0000;
 }
 
 .home-page {
