@@ -9,10 +9,6 @@ var app = app || {};
   // Our overall **AppView** is the top-level piece of UI.
   app.CardView = Backbone.View.extend({
     el: '.page-content',
-    events: {
-      'click .fb-share': 'shareOnFacebook'
-    },
-    rewardNum: 0,
     category: undefined,
     slug: undefined,
     initialize: function (slug) {
@@ -28,79 +24,6 @@ var app = app || {};
       $('head').html(headTemplate(app.data.meta))
       this.$el.append(template({card: slug, next: app.data.cards[next], prev: app.data.cards[prev]}))
       $('.page-body').attr('class', 'page-body card ' + slug)
-      this.render()
-    },
-    render: function (){
-      new app.QuestionView(this.category, this.slug, app.questions, this);
-    },
-    reward: function (question) {
-      $(this.$('.flipper')[question]).addClass('reward')
-    },
-    share: function (correct_answers) {
-      $('.score').html('You got '+ correct_answers + ' of 5 correct.')
-      this.$('.post-quiz').show()
-    },
-    shareOnFacebook: function () {
-      $('.pre-share').hide()
-      $('.during-share').show()
-      var that = this
-      html2canvas($(".image-container"), {
-        onrendered: function(canvas) {
-          var imageData = canvas.toDataURL("image/png")
-            , webSite = "Made this using "
-            , fileName = "RepublicDayCard"
-          FB.getLoginStatus(function(response) {
-            webSite+= window.location.href;
-            if (response.status === "connected") {
-              that.postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", imageData, webSite);
-            } else {
-              FB.login(function(response)  {
-                that.postImageToFacebook(response.authResponse.accessToken, fileName, "image/png", imageData, webSite);
-              }, {scope: "publish_actions"});
-           }
-         });
-        }
-      })
-    },
-    dataURItoBlob: function(dataURI) {
-      var byteString = atob(dataURI.split(',')[1])
-        , ab = new ArrayBuffer(byteString.length)
-        , ia = new Uint8Array(ab)
-      for (var i = 0; i < byteString.length; i++) {
-          ia[i] = byteString.charCodeAt(i)
-      }
-      return new Blob([ab], {
-        type: 'image/png'
-      })
-    },
-    postImageToFacebook: function(authToken, filename, mimeType, imageData, message) {
-      try {
-        var blob = this.dataURItoBlob(imageData);
-      } catch (e) {
-        alert("Could not process your image. Please try again");
-        return false;
-      }
-      var fd = new FormData();
-      fd.append("access_token", authToken);
-      fd.append("source", blob);
-      fd.append("message", "Happy Republic Day. Test your knowledge about India on http://www.makemyholidaycard.com and make your own republic day card.");
-
-      $.ajax({
-        url: "https://graph.facebook.com/me/photos?access_token=" + authToken,
-        type: "POST",
-        data: fd,
-        processData: false,
-        contentType: false,
-        success: function (data) {
-        },
-        error: function (shr, status, data) {
-          $('.post-share .status').text('There was an error while sharing to Facebook.')
-        },
-        complete: function () {
-          $('.during-share').hide()
-          $('.post-share').show()
-        }
-      });
     }
   });
 })(jQuery);

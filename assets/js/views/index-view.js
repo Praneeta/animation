@@ -40,8 +40,8 @@ var app = app || {};
     },
     triggerFbShare: function(event) {
       FB.ui({
-        method: 'share',
-        href: $(event.target).parents('.card-holder').attr('data-href'),
+        method: 'send',
+        link: $(event.target).parents('.card-holder').attr('data-href'),
       }, function(response){
         console.log("We got resp from FB")
         console.log(response)
