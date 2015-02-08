@@ -1,10 +1,15 @@
-div.top-ad {
+.top-ad {
   text-align: center;
 }
 
-div.top-ad div {
+.top-ad ins {
   margin: 0 auto;
+  display:inline-block;
+  width:728px;
+  height:90px;
 }
+
+
 
 .img-thumbnail {
   display: block;
@@ -337,26 +342,8 @@ div.top-ad div {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 
-  .flip-container, .front, .back {
-    width: 35px;
-    height: 35px;
-  }
-
   .whats-app {
     display: block;
-  }
-
-  .decorate .fadeout {
-    -webkit-transition: all 4s ease-in-out;
-    -moz-transition: all 4s ease-in-out;
-    -ms-transition: all 4s ease-in-out;
-    -o-transition: all 4s ease-in-out;
-    transition: all 4s ease-in-out;
-    opacity: 0;
-  }
-
-  .card .image-container {
-    min-height: 600px;
   }
 
   .empty-div {
@@ -368,12 +355,8 @@ and (max-device-width : 480px) {
     left: 15%;
   }
 
-  .card .post-quiz {
-    top: 10%;
-    left: 10%;
-    width: 80%;
+  .top-ad ins{
+    width: 300px;
   }
-  .questions-container {
-    top: auto;
-  }
+
 }
