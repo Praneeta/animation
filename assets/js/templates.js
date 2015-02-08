@@ -20,7 +20,7 @@ app.templates.cards = {}
 
 app.templates.cards.index = {
   content: "<h1 class=\"h1\"><span style=\"color: #CC0000\">Happy Valentine's Day</span></h1>"
-      + "<h2 class=\"help-text\">Say what you want to say with one of our cards.</h2>"
+      + "<h2 class=\"help-text hidden-xs\">Say what you want to say with one of our cards.</h2>"
       + "<h2 class=\"help-text\"> Share it with your loved one.</h2>"
       + "<div class=\"container\"></div>"
       + "<div class=\"footer\">Contact us at: makemyholidaycard@gmail.com</div>"
