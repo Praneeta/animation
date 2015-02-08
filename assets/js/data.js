@@ -9,7 +9,7 @@ app.data.meta = {
   title: 'Happy Valentine\'s Day | makemyholidaycard.com',
   keywords: 'cards, free, quiz, 14, Feb, valentine, valentines day, love, hearts, cute, romance, romantic, funny, chemistry, ecards, last minute cards',
   description: 'Love is in the air. Happy Valentine\'s Day.',
-  imageType: 'be-my-valentine',
+  imageType: 'bee-my-valentine',
   image: 'jpg',
   icon: 'heart.png'
 }
