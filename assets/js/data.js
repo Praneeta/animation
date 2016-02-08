@@ -14,4 +14,7 @@ app.data.meta = {
   icon: 'heart.png'
 }
 
-app.data.cards = ['palpatine', 'solo-valentine', 'yoda', 'heart-side', 'big_heart', 'bomb',	'heart-jars', 'cards', 	'heart-key', 'stick_together', 'heart_balloons', 'heart_jars_love', 'crush', 'you_complete_me', 'bee-my-valentine', 'chemistry', 'olive-you', 'loaf-you','cute', 'chemistry-be-valentine' , 'love', 'u-blew-my-mind', 'chemistry-valentine', 'king', 'queen', 'listen' ]
+app.data.cards = ['palpatine', 'solo-valentine', 'yoda', 'heart-side', 'big_heart', 'cards', 'bomb',
+'heart-jars', 'crush', 'heart-key', 'stick_together', 'heart_balloons', 'heart_jars_love', 'you_complete_me',
+'bee-my-valentine', 'chemistry', 'olive-you', 'loaf-you',
+'cute', 'chemistry-be-valentine' , 'love', 'u-blew-my-mind', 'chemistry-valentine', 'king', 'queen', 'listen' ]
