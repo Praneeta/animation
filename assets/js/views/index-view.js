@@ -27,6 +27,7 @@ var app = app || {};
     render: function(){
       var newRow
         , template = _.template(this.templates.card)
+        , videoTemplate = _.template(this.templates.cardVideo)
         , emptyDiv
       this.collection.forEach(function(card, index){
         if(index % 3 === 0) {
@@ -34,7 +35,12 @@ var app = app || {};
           newRow = $('<div class="row"></div>')
           this.$('.container').append(newRow).append(emptyDiv)
         }
-        newRow.append(template({card: card}))
+        if(_.isString(card)){
+          newRow.append(template({card: card}))
+        }
+        else {
+          newRow.append(videoTemplate({card: card.card, video: card.video}))
+        }
       }.bind(this))
       emptyDiv.remove()
     },
